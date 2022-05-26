@@ -418,17 +418,6 @@ ctier=[A-Z] url 302 ctier=A
 ^https?:\/\/osg-static\.sgcc\.com\.cn\/omg-static\/.*.jpg url reject-200
 # > keep
 ^https?:\/\/api\.gotokeep\.com\/ads url reject
-# > spotify音乐
-^https?:\/\/spclient\.wg\.spotify\.com\/.+ad_slot url reject-img
-^https?:\/\/spclient\.wg\.spotify\.com\/.+banners url reject-img
-^https?:\/\/spclient\.wg\.spotify\.com\/.+crashlytics url reject-img
-^https?:\/\/spclient\.wg\.spotify\.com\/.+doubleclick url reject-img
-^https?:\/\/spclient\.wg\.spotify\.com\/.+enabled-tracks url reject-img
-^https?:\/\/spclient\.wg\.spotify\.com\/.+event url reject-img
-^https?:\/\/spclient\.wg\.spotify\.com\/.+promoted url reject-img
-^https?:\/\/spclient\.wg\.spotify\.com\/.+sponsored url reject-img
-^https?:\/\/spclient\.wg\.spotify\.com\/ad-logic url reject-img
-^https?:\/\/spclient\.wg\.spotify\.com\/ads url reject-img
 # > 滴滴出行（推荐英文版）
 https?://res\.xiaojukeji\.com\/resapi\/activity\/mget url reject-dict
 https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) url reject

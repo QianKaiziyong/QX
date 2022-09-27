@@ -21,10 +21,15 @@ hostname = ad.ysepay.com， m.jd.com, www.zhihu.com, api.zhihu.com, appcloud2.zh
 # > 招商银行
 ^https?+:\/\/pic1cdn\.cmbchina\.com\/appinitads\/ url reject-200
 ^https?:\/\/resource.cmbchina.com\/fsp\/File\/ClientFacePublic\/.+.gif url reject
-# > 掌上生活
-^https?:\/\/res\.cc\.cmbimg\.com\/fsp\/File\/AdPlatformPublic\/[a-z0-9]{32}\.jpeg url reject-200
+# > 掌上生活（设置打不开，8.5.10以上版本很多功能打不开，添加主机名生效）
+^https?:\/\/res\.cc\.cmbimg\.com\/fsp\/File\/AdPlatformPublic\/.*.(jpeg|jpg|png) url reject-200
+# > 招商银行
+^https?+:\/\/pic1cdn\.cmbchina\.com\/appinitads\/ url reject-200
+^https?:\/\/resource.cmbchina.com\/fsp\/File\/ClientFacePublic\/.+.gif url reject
 # > gif url reject 只拦截gif格式的图片
 ^https:\/\/s3gw.cmbimg.com\/mbappinitads\/.*.(jpg|png) url reject-200
+# > 知乎开屏页广告,首页右下角悬浮框,推荐列表广告,问题回答列表广告,具体回答下广告
+^https:\/\/(appcloud2\.zhihu\.com\/v3\/config$|www\.zhihu\.com\/api\/v4\/answers\/\d+\/recommendations|api\.zhihu\.com\/(topstory\/recommend|commercial_api\/(real_time_launch_v2|app_float_layer$)|questions\/\d+\/feeds\?|v4\/questions\/\d+\/answers\?)) url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/zhihu.js
 # > 平安好车主
 ^https?:\/\/iobs\.pingan\.com\.cn\/download\/bweb-per-sf-prd\/bweb url reject
 ^https?:\/\/iobs\.pingan\.com\.cn\/download\/icore-aops-base-dmz-prd\/YourSystemName url reject
@@ -80,6 +85,10 @@ https://homefront.qunar.com/front/splash/ad url reject
 ^https?:\/\/client\.qunar\.com\/pitcher-proxy\?qrt=p_splashAd url reject-img
 # > 小红书
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config url script-response-body https://raw.githubusercontent.com/28413761/QX/main/JS/xiaohongshu.ad.js
+# > 爱思助手
+^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml url reject
+# > 酷安去首页广告、信息流广告、评论广告
+^https?:\/\/api.coolapk.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) url script-response-body https://github.com/ddgksf2013/Cuttlefish/raw/master/Script/coolapk.js
 # > 淘宝
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome\/ url reject-200
 ^https?+:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.tmall\.wireless url reject-200

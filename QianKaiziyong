@@ -143,24 +143,6 @@ hostname = api.tipsoon.com, imeclient.openspeech.cn, m.360buyimg.com, business-c
 ^https:\/\/mbd\.baidu\.com\/newspage\/api\/getmobads\?page\=landingshare url reject
 # > 华住
 ^https?:\/\/appapi\.huazhu\.com:\d{4}\/client\/app\/getAppStartPage\/ url reject
-# > 豆瓣
-^https?:\/\/api\.douban\.com\/v2\/app_ads\/splash url reject-dict
-^https?:\/\/api\.douban\.com\/b.*\/common_ads\?.* url reject-dict
-^https?:\/\/img\d\.doubanio\.com\/view\/dale-online\/dale_ad\/ url reject
-^https?:\/\/frodo.douban.com\/api\/v2\/movie\/banner url reject
-^https?:\/\/erebor\.douban\.com\/count\/\?ad= url reject
-^https?+:\/\/api\.douban\.com\/v\d\/app_ads\/ url reject-200
-# > 斗鱼直播
-^https?:\/\/staticlive.douyucdn.cn\/.+\/getStartSend url reject
-^https?:\/\/staticlive.douyucdn.cn\/upload\/signs\/ url reject
-^https?:\/\/douyucdn.cn\/.+\/appapi\/getinfo url reject
-^https?+:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo url reject-200
-^https?:\/\/capi.douyucdn.cn\/lapi\/sign\/app(api)?\/getinfo\?client_sys=ios url reject
-^https?:\/\/capi\.douyucdn\.cn\/api\/ios_app\/check_update url reject-img
-^https?:\/\/capi\.douyucdn\.cn\/api\/v1\/getStartSend?client_sys=ios url reject-img
-^https?:\/\/douyucdn\.cn\/.+?\/appapi\/getinfo url reject-img
-^https?:\/\/staticlive\.douyucdn\.cn\/.+?\/getStartSend url reject-img
-^https?:\/\/staticlive\.douyucdn\.cn\/upload\/signs\/ url reject-img
 # > 当当
 ^https?:\/\/api\.dangdang\.com\/mapi\d\/mobile\/init url reject
 ^https?:\/\/e\.dangdang\.com\/media\/api.+?\?action=getDeviceStartPage url reject
@@ -301,30 +283,14 @@ https?:\/\/t7z\.cupid\.iqiyi\.com\/show url reject
 ^https://api.weibo.cn/2/!/client/light_skin url script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js
 # > 微博非会员设置tab皮肤
 ^https://new.vip.weibo.cn/littleskin/preview url script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js
-# > 微博轻享版（原国际版）去广告
-# > 微博国际版_sdkad
-# > 微博国际版_推荐tab|热门tab去广告
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses\/unread_hot_timeline url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/weibo_json.js
-# > 微博国际版_关注tab去广告 
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses\/friends_timeline url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/weibo_json.js
-# > 微博国际版_趋势tab 
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/cardlist url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/weibo_json.js
 # > 微博国际版_屏蔽search_suggest 
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/page\/get_search_suggest url reject-dict
-# > 微博国际版_趋势tab去广告 
-^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=trends url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/weibo_json.js
 # > 微博国际版_屏蔽searching_info 
 ^ttps?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*user&a=get_searching_info url reject
 # > 微博国际版_屏蔽search_topic 
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=search_topic url reject
 # > 微博国际版_屏蔽开屏广告 
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*ads url reject
-# > 途牛
-^https?+:\/\/m\.tuniu\.com\/api\/operation\/splash\/ url reject-200
-# > 顺丰
-^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/appVersion\/detectionUpgrade url reject-dict
-^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/ url reject
-^https?:\/\/shopic\.sf-express\.com\/crm\/mobile\/common\/flashscreen url reject
 # > 美团
 ^https?+:\/\/img\.meituan\.net\/(?>adunion|display|midas)\/.+?\.(gif|jpg|jpg\.webp)$ url reject-200
 ^https?+:\/\/p\d\.meituan\.net\/wmbanner\/[A-Za-z0-9]+?\.jpg url reject-200

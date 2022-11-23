@@ -1,21 +1,32 @@
-# > /*  APP开屏广告拦截，APP启动广告拦截！
-# > 某些APP要清除缓存或者重新安装APP，拦截广告才会生效！  
-# > a28413761  收集整理
-# > 更新时间  2022.05.26
-# > */  
+################################################################
+# 重写作用：针对部分APP开屏广告，应用内广告进行拦截
+# 重要提示：某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
+# 项目地址：https://github.com/fmz200/wool_scripts
+# 交流频道：https://t.me/Aa28413761
+# 更新时间：2022.11.21 20:36
+###############################################################
+# > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
+# > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
+# > "reject-img"    策略返回 HTTP 状态码 200,同时附带 1px gif
+# > "reject-dict"   策略返回 HTTP 状态码 200,同时附带一个空的 JSON 对象
+# > "reject-array"  策略返回 HTTP 状态码 200,同时附带一个空的 JSON 数组
+###############################################################
 
-# QQ音乐广告
-HOST,tmeadcomm.y.qq.com, reject
-HOST,ad.tencentmusic.com, reject
-HOST,adstats.tencentmusic.com, reject
-HOST,tmead.y.qq.com, reject
-HOST-SUFFIX,rqd.qq.com, reject
-HOST-SUFFIX,wup.imtt.qq.com, reject
-HOST-SUFFIX,gdt.qq.com, reject
-HOST-SUFFIX,android.rqd.qq.com, reject
-HOST-SUFFIX,e.qq.com, reject
-HOST-SUFFIX,beacon.qq.com, reject
-HOST-SUFFIX,v.gdt.qq.com, reject
+
+# > 云闪付
+host-keyword, switch.cup.com.cn, reject
+host-keyword, sdk.open.talk.getui.net, reject
+host-keyword, sdk-conf.getui.com, reject
+host-keyword, cm-10-138.getui.com, reject
+host-keyword, ads.95516.com, reject
+# > 哈啰
+host-keyword, assets.51downapp.cn, reject
+# > 叮嗒出行
+host-keyword, image.bianxianmao.com, reject
+ip-cidr, 203.107.1.1/24, reject
+# > 小米
+HOST,data.mistat.xiaomi.com, reject
+HOST,tracking.intl.miui.com, reject
 # > 高德
 HOST-SUFFIX,adiu.amap.com,REJECT
 HOST,aboard.apilocate.amap.com,REJECT
@@ -41,7 +52,6 @@ HOST-SUFFIX, report.meituan.com, reject
 HOST-SUFFIX, wmlog.meituan.com, reject
 # > 交管12123
 host, static.122.gov.cn, reject
-ip-cidr, 203.107.1.1/24, reject
 HOST-SUFFIX, v3.fstats.xyz, reject
 HOST-SUFFIX, wss.haoyundmn.com, reject 
 HOST-SUFFIX, new.xiongzhangad.com, reject  
@@ -52,6 +62,49 @@ HOST-SUFFIX,atm.youku.com, reject
 HOST,ad.mobile.youku.com, reject
 HOST,iyes.youku.com, reject
 HOST,pl.cp31.ott.cibntv.net, reject
+HOST-SUFFIX,actives.youku.com, reject
+HOST-SUFFIX,ad.api.3g.tudou.com, reject
+HOST-SUFFIX,ad.api.3g.youku.com, reject
+HOST-SUFFIX,ad.api.mobile.youku.com, reject
+HOST-SUFFIX,a-dxk.play.api.3g.youku.com, reject
+HOST-SUFFIX,b.smartvideo.youku.com, reject
+HOST-SUFFIX,c.yes.youku.com, reject
+HOST-SUFFIX,das.api.youku.com, reject
+HOST-SUFFIX,das.mobile.youku.com, reject
+HOST-SUFFIX,dev-push.m.youku.com, reject
+HOST-SUFFIX,dl.g.youku.com, reject
+HOST-SUFFIX,dmapp.youku.com, reject
+HOST-SUFFIX,gamex.mobile.youku.com, reject
+HOST-SUFFIX,hudong.pl.youku.com, reject
+HOST-SUFFIX,huodong.pl.youku.com, reject
+HOST-SUFFIX,huodong.vip.youku.com, reject
+HOST-SUFFIX,hz.youku.com, reject
+HOST-SUFFIX,iyes.youku.com, reject
+HOST-SUFFIX,l.ykimg.com, reject
+HOST-SUFFIX,lstat.youku.com, reject
+HOST-SUFFIX,m.yes.youku.com, reject
+HOST-SUFFIX,mobilemsg.youku.com, reject
+HOST-SUFFIX,msg.youku.com, reject
+HOST-SUFFIX,myes.youku.com, reject
+HOST-SUFFIX,p.l.youku.com, reject
+HOST-SUFFIX,passport-log.youku.com, reject
+HOST-SUFFIX,p-log.ykimg.com, reject
+HOST-SUFFIX,push.m.youku.com, reject
+HOST-SUFFIX,r.l.youku.com, reject
+HOST-SUFFIX,s.p.youku.com, reject
+HOST-SUFFIX,sdk.api.gamex.mobile.youku.com, reject
+HOST-SUFFIX,sdk.m.youku.com, reject
+HOST-SUFFIX,stat.youku.com, reject
+HOST-SUFFIX,store.tv.api.3g.youku.com, reject
+HOST-SUFFIX,store.xl.api.3g.youku.com, reject
+HOST-SUFFIX,tdrec.youku.com, reject
+HOST-SUFFIX,test.ott.youku.com, reject
+HOST-SUFFIX,urchin.lstat.youku.com, reject
+HOST-SUFFIX,v.l.youku.com, reject
+HOST-SUFFIX,val.api.youku.com, reject
+HOST-SUFFIX,wan.youku.com, reject
+HOST-SUFFIX,ykatr.youku.com, reject
+HOST-SUFFIX,ykrec.youku.com, reject
 # > 百度
 HOST-SUFFIX,duapps.com, reject
 HOST-SUFFIX,cpro.baidu.com, reject
@@ -215,6 +268,11 @@ IP-CIDR,101.227.97.240/32, reject
 IP-CIDR,101.227.200.11/32, reject
 IP-CIDR,101.227.200.28/32, reject
 IP-CIDR,124.192.153.42/32, reject
+# > 中国电信
+HOST,ad.21cn.com, reject
+HOST,ad.k.21cn.com, reject
+HOST,admarket.21cn.com, reject
+HOST,adshows.21cn.com, reject
 # > 谷歌
 HOST-SUFFIX,google-analytics.com, reject
 HOST,safebrowsing.googleapis.com, reject
@@ -239,6 +297,34 @@ HOST-SUFFIX,afd.l.google.com, reject
 HOST-SUFFIX,www.googleadservices.com, reject
 HOST-SUFFIX,www.google-analytics.com, reject
 HOST,ads.youtube.com, reject
+# > 墨迹天气
+host-keyword, fds.api.moji.com, reject
+host-keyword, me.api.moji.com, reject
+host-keyword, android.bugly.qq.com, reject
+host-keyword, av1.xdrig.com, reject
+host-keyword, adash.man.aliyuncs.com, reject
+host-keyword, v1.log.moji.com, reject
+host-keyword, ad.api.moji.com, reject
+HOST,ad.api.moji.com, reject
+HOST,adlaunch.moji.com, reject
+HOST,ads.mojicdn.com, reject
+HOST,v1.log.moji.com, reject
+# > 中华万年历广告
+host-keyword, lkme.cc, reject
+host-keyword, api.freed.so, reject
+host-keyword, log-dmp.suishenyun.cn, reject
+host-keyword, client-dmp.suishenyun.cn, reject
+host-keyword, pc.suishenyun.net, reject
+host-keyword, v0-client-lz.rili.cn, reject
+# > 腾讯视频
+host-suffix, tetrack.qq.com, reject
+host-suffix, tpns.tencent.com, reject
+host-suffix, api.poll.video.qq.com, reject
+host-suffix, static-res.qq.com, reject
+host-suffix, stat.tpns.tencent.com, reject
+host, h.trace.qq.com, reject
+host-keyword, omgmta.qq.com, reject
+host-keyword, omgmta1.qq.com, reject
 # > 爱奇艺
 host, cr-status.iqiyi.com, reject
 host-suffix, cupid.iqiyi.com, reject
@@ -248,6 +334,53 @@ host, iqiyim.adtrack.enlightent.cn, reject
 HOST,dig.bdurl.net, reject
 HOST,ads3-normal-lq.zijieapi.com, reject
 HOST,ads5-normal-lq.zijieapi.com, reject
+# > WiFi万能钥匙广告
+host-keyword, app.51y5.net, reject
+host-keyword, apiinit.amap.com, reject
+host-keyword, c.51y5.net, reject
+host-keyword, msg.push.51y5.net, reject
+host-keyword, a.wkanx.com, reject
+host-keyword, c.wkanx.com, reject
+host-keyword, c1.wkanx.com, reject
+host-keyword, ap.51y5.net, reject
+host-keyword, dc.51y5.net, reject
+host-keyword, push-dc.51y5.net, reject
+host-keyword, news-log.51y5.net, reject
+host-keyword, login.push.51y5.net, reject
+host-keyword, news.51y5.net, reject
+host-keyword, cds.51y5.net, reject
+host-keyword, insurance.lianwifi.com, reject
+host-keyword, config.51y5.net, reject
+host-keyword, static.wkanx.com, reject
+host-keyword, config.y5en.com, reject
+# > 今日头条
+host, dm.toutiao.com, reject
+host-keyword, ad.toutiao.com, reject
+host-keyword, clk.gentags.net, reject
+host-keyword, dm.toutiao.com, reject
+host-keyword, dm.pstatp.com, reject
+host-keyword, dm.bytedance.com, reject
+host-keyword, uop.umeng.com, reject
+host-keyword, policy.jd.com, reject
+host-keyword, kepler.jd.com, reject
+host-keyword, bdsp.x.jd.com, reject
+host-keyword, keplerapi.jd.com, reject
+host-keyword, m.suning.com, reject
+host-keyword, adshare.toutiao.com, reject
+host-keyword, tunion-api.m.taobao.com, reject
+host-keyword, mapi.m.jd.com, reject
+host-keyword, s1.pstatp.com, reject
+host-keyword, s2.pstatp.com, reject
+host-keyword, s3.pstatp.com, reject
+host-keyword, a3.pstatp.com, reject
+host-keyword, a3.bytecdn.cn, reject
+host-keyword, ichannel.snssdk.com, reject
+# > 新浪
+HOST-SUFFIX,beacon.sina.com.cn, reject
+HOST,u1.img.mobile.sina.cn, reject
+HOST,sax.sina.com.cn, reject
+HOST,saxs.sina.com.cn, reject
+HOST,saxn.sina.com.cn, reject
 # >  腾讯
 HOST-SUFFIX,news.ssp.qq.com, reject
 HOST-SUFFIX,news.l.qq.com, reject
@@ -415,6 +548,9 @@ HOST-KEYWORD,ad.weibo.com,REJECT
 HOST-KEYWORD,adstrategy.biz.weibo.com,REJECT
 HOST-KEYWORD,s.weibo.com,REJECT
 HOST-KEYWORD,vs.biz.weibo.com,REJECT
+# > keep
+HOST,apm.gotokeep.com, reject
+HOST,kad.gotokeep.com, reject
 # >小红书
 HOST,ads-img-qc.xhscdn.com, reject
 HOST,ads-video-al.xhscdn.com, reject
@@ -469,14 +605,14 @@ HOST-SUFFIX,cm.ad.bilibili.com, reject
 HOST-SUFFIX,cm.adcommon.bilibili.com, reject
 HOST-SUFFIX,cm.game.bilibili.com, reject
 HOST-SUFFIX,cm.track.biligame.bilibili.com, reject
-# > 美颜相机去首页和轮播广告
-host, adui.tg.meitu.com, reject
-host, aaid.uyunad.com, reject
 # > 铁路12306
 HOST, ad.12306.cn, REJECT
+# > 抖音
+host-keyword,bds.snssdk.com, reject
+host-keyword,p6-ad-sign.byteimg.com, reject
+host-keyword,p3.pstatp.com, reject
 # > 其他广告
 host-keyword,extlog.snssdk.com, reject
-host-keyword,i.snssdk.com, reject
 host-keyword,is.snssdk.com, reject
 host-keyword,log.snssdk.com, reject
 host-keyword,mobads.baidu.com, reject
@@ -6738,7 +6874,6 @@ HOST-SUFFIX,sdk.open.amp.igexin.com, reject
 HOST-SUFFIX,sdk.open.lbs.igexin.com, reject
 HOST-SUFFIX,sdk.open.phone.igexin.com, reject
 HOST-SUFFIX,sdk.open.talk.gepush.com, reject
-HOST-SUFFIX,sdk.open.talk.igexin.com, reject
 HOST-SUFFIX,sdkapp.mobile.sina.cn, reject
 HOST-SUFFIX,sdkclick.mobile.sina.cn, reject
 HOST-SUFFIX,sdkconfig.ad.intl.xiaomi.com, reject
@@ -8963,20 +9098,3 @@ HOST-SUFFIX,zoomanalytics.co, reject
 HOST-SUFFIX,ads.linkedin.com, reject
 HOST,analytics.slashdotmedia.com, reject
 HOST,zgsdk.zhugeio.com, reject
-# > 51.LA
-HOST,js.users.51.la, reject
-HOST,mc.51.la, reject
-HOST,wc.51.la, reject
-# >58
-HOST,track.58.com, reject
-HOST,tracklog.58.com, reject
-# > Daum
-HOST,track.tiara.daum.net, reject
-HOST,track.tiara.kakao.com, reject
-# > GozenData
-# https://www.v2ex.com/t/772523, reject
-HOST-SUFFIX,gozendata.com, reject
-HOST-SUFFIX,gzads.com, reject
-HOST-SUFFIX,gz-data.com, reject
-# > GrowingIO
-HOST-SUFFIX,giocdn.com, reject

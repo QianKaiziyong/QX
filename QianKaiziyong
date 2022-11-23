@@ -141,9 +141,6 @@ hostname = api.tipsoon.com, imeclient.openspeech.cn, m.360buyimg.com, business-c
 # > 携程（8.47.0以上版本会有部分图片加载不出来）
 ^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/13916\/scjson\/tripAds url reject-200
 ^https:\/\/mbd\.baidu\.com\/newspage\/api\/getmobads\?page\=landingshare url reject
-# > 飞常准
-^https?:\/\/app\.variflight\.com\/ad\/ url reject
-^https?:\/\/app\.variflight\.com\/v\d\/advert\/ url reject
 # > 华住
 ^https?:\/\/appapi\.huazhu\.com:\d{4}\/client\/app\/getAppStartPage\/ url reject
 # > 豆瓣
@@ -442,8 +439,6 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https?:\/\/pt-starimg\.didistatic\.com\/static\/starimg\/node\/.*.(jpg|png|gif) url reject-200
 ^https?:\/\/omgup[0-9]{1}\.xiaojukeji\.com\/api url reject-200
 ^https?:\/\/omgup*\.xiaojukeji\.com\/api url reject-200
-# > 中国知网
-^https?+:\/\/xyz\.cnki\.net\/resourcev7\/api\/manualpush\/SlidsList$ url reject-200
 # > 叮嗒出行
 ^https?:\/\/img\.admobile\.top\/admobile-adRequest\/.*.(jpg|png) url reject-200
 ^https?:\/\/webcdn\.m\.qq\.com\/qiantu\/upload\/202[0-9]{5}\/.*.(jpg|png) url reject-200
@@ -461,14 +456,6 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome url reject-200
 # > 必胜客
 ^https?:\/\/res\.pizzahut\.com\.cn\/CRM\/phad\/apphome\/apphome url reject-200
-# > LocSim屏蔽虚拟定位升级弹窗
-^https?:\/\/app\.aa-ab\.com\/home url reject-200
-# > 央视频
-^https?:\/\/cdn\.cmgadx\.com\/sdk\/pool\/m8uTS50pt3DC0Xd6\.json url reject-200
-# > 唯品会
-^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/activity\/advertisement\/get url reject-200
-# > 美团众包
-^https?:\/\/peisongapi\.meituan\.com\/client\/getInitiateImage url reject-200
 # > 微信小程序 e生活 主机名 image*.elife.icbc.com.cn
 ^https?:\/\/image4\.elife\.icbc\.com\.cn\/filepath\/elife\/2022\/05\/17\/09\/f737724e85c24b3cb056ff5d781a9139_s\.jpg url reject-200
 ^https?:\/\/image3\.elife\.icbc\.com\.cn\/filepath\/elife\/2022\/09\/16\/10\/0c577a75653e4f94a5c6ee2cccbc62ce_s\.JPG url reject-200
@@ -476,7 +463,3 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https?:\/\/api\.m\.mi\.com\/v1\/app\/start url response-body "data":"skip_splash":false, response-body "data":"skip_splash":true,
 # > 去除公众号商品推广 主机名 mp.weixin.qq.com
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/cps_product_info\?action url reject-dict
-# > RARBG (https://rarbgmirror.org/torrents.php)
-^https?:\/\/dyncdn\.me\/static\/\d{0,2}\/js\/expla\d{0,4}\.js$ url reject-200
-^https?:\/\/dyncdn\.me\/static\/\d{0,2}\/js\/showads\.js$ url response-body true response-body false
-

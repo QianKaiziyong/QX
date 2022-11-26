@@ -56,20 +56,9 @@ hostname =hcz-member.pingan.com.cn, m.360buyimg.com, m*.amap.com, image2.elife.i
 ^http:\/\/interface\.music\.163\.com\/eapi\/ad\/config\/get url reject
 ^https?:\//m\.ads\.8le8le\.com\/adShow url reject
 # > 百度网盘
-^https?:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adx url reject
-^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry url reject
-^https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/guanggao url reject
-^https?:\/\/update.pan.baidu.com\/statistics url reject
-^https:\/\/pan\.baidu\.com\/pmall\/order\/privilege\/info url reject
-^https:\/\/pan\.baidu\.com\/rest\/.+\/pcs\/adx url reject
-^https:\/\/pan\.baidu\.com\/api\/useractivity\/activity url reject
-^http:\/\/pan\.baidu\.com\/act\/.+\/bchannel\/list url reject
-^https:\/\/pan\.baidu\.com\/api\/certuser\/get url reject
-^https:\/\/ndstatic\.cdn\.bcebos\.com\/activity\/welfare\/js\/.+\.js url reject
-^https:\/\/ndstatic\.cdn\.bcebos\.com\/activity\/welfare\/index\.html url reject
-^https:\/\/staticsns\.cdn\.bcebos\.com\/amis\/.+/banner.png url reject
-^http:\/\/rp\.hpplay\.cn\/logouts url reject
-^https:\/\/pan\.baidu\.com\/component\/view\/(1510|1130)\?vip url reject
+^https?:\/\/pan\.baidu\.com\/act\/v\d\/bchannel\/list url reject-200
+^https?:\/\/pan\.baidu\.com\/act\/v\d\/welfare\/list url reject-200
+^https?:\/\/pan\.baidu\.com\/rest\/2\.0\/pcs\/ad url reject-200
 # 贴吧全面去广告 //c.tieba.baidu.com, tiebac.baidu.com
 # 须搭配分流: IP-CIDR, 180.76.76.200/32, REJECT
 ^http(:\/\/c\.tieba|s:\/\/tiebac)\.baidu\.com\/(c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)$|tiebaads\/commonbatch|c\/s\/sync$) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js

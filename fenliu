@@ -141,8 +141,6 @@ HOST-SUFFIX,cm.ad.bilibili.com, reject
 HOST-SUFFIX,cm.adcommon.bilibili.com, reject
 HOST-SUFFIX,cm.game.bilibili.com, reject
 HOST-SUFFIX,cm.track.biligame.bilibili.com, reject
-# > 铁路12306
-HOST, ad.12306.cn, REJECT
 # > 抖音
 host-keyword,bds.snssdk.com, reject
 host-keyword,p6-ad-sign.byteimg.com, reject

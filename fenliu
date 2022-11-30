@@ -12,6 +12,8 @@
 # > "reject-array"  策略返回 HTTP 状态码 200,同时附带一个空的 JSON 数组
 ###############################################################
 
+# > 中国联通
+HOST-SUFFIX,m1.ad.10010.com, reject
 # > 高德
 HOST-SUFFIX,adiu.amap.com,REJECT
 HOST,aboard.apilocate.amap.com,REJECT

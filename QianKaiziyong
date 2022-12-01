@@ -155,11 +155,11 @@ ctier=[A-Z] url 302 ctier=A
 # > 票根
 ^https?:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen/ url reject-200
 # 饿了么 //elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com
-^https?:\/\/elemecdn.com\/.+\/sitemap url reject
-^https?:\/\/fuss10.elemecdn.com\/.+\/w\/640\/h\/\d{3,4} url reject
-^https?:\/\/fuss10.elemecdn.com\/.+\/w\/750\/h\/\d{3,4} url reject
-^https?:\/\/fuss10.elemecdn.com\/.+.mp4 url reject
-^https?:\/\/www1.elecfans.com\/www\/delivery\/ url reject
+#^https?:\/\/elemecdn.com\/.+\/sitemap url reject
+#^https?:\/\/fuss10.elemecdn.com\/.+\/w\/640\/h\/\d{3,4} url reject
+#^https?:\/\/fuss10.elemecdn.com\/.+\/w\/750\/h\/\d{3,4} url reject
+#^https?:\/\/fuss10.elemecdn.com\/.+.mp4 url reject
+#^https?:\/\/www1.elecfans.com\/www\/delivery\/ url reject
 # > 丰巢
 ^https?:\/\/consumer\.fcbox\.com\/v\d\/ad\/ url reject
 # > 网上国网（倒计时还在）

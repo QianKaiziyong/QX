@@ -12,8 +12,6 @@
 # > "reject-array"  策略返回 HTTP 状态码 200,同时附带一个空的 JSON 数组
 ###############################################################
 
-# > 中国联通
-HOST-SUFFIX,m1.ad.10010.com, reject
 # > 高德
 HOST-SUFFIX,adiu.amap.com,REJECT
 HOST,aboard.apilocate.amap.com,REJECT
@@ -101,6 +99,7 @@ HOST,mqtt.zhihu.com, reject
 HOST,sugar.zhihu.com, reject
 HOST,118.89.204.198, reject
 IP-CIDR,118.89.204.198/32, reject
+IP-CIDR,188.89.204.198/32, reject
 IP6-CIDR,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,REJECT
 # > 淘宝
 HOST-SUFFIX,apoll.m.taobao.com, reject
@@ -147,11 +146,7 @@ HOST-SUFFIX,cm.track.biligame.bilibili.com, reject
 host-keyword,bds.snssdk.com, reject
 host-keyword,p6-ad-sign.byteimg.com, reject
 host-keyword,p3.pstatp.com, reject
-
-
-#知乎
-IP-CIDR,188.89.204.198/32, reject
-# 运营商劫持
+# > 运营商劫持
 HOST-SUFFIX,189key.com, reject
 HOST-SUFFIX,bkyhq.cn, reject
 HOST-SUFFIX,gscxs.cn, reject
@@ -167,14 +162,14 @@ HOST-SUFFIX,wsgblw.com, reject
 HOST-SUFFIX,xchmai.com, reject
 HOST-SUFFIX,ygyzx.cn, reject
 HOST-SUFFIX,zmlled.cn, reject
-# > ChinaTelecom
+# > 中国电信
 IP-CIDR,122.229.8.47/32, reject
 IP-CIDR,122.229.29.89/32, reject
-# > ChinaUnicom
-# > ChinaMobile
+# > 中国联通
+HOST-SUFFIX,m1.ad.10010.com, reject
+# > 中国移动
 IP-CIDR,120.240.95.37/32, reject
-
-# 隐私保护
+# > 隐私保护
 HOST-SUFFIX,airpr.com, reject
 HOST-SUFFIX,hotjar.com, reject
 HOST-SUFFIX,hotjar.io, reject

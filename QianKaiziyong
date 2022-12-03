@@ -214,12 +214,3 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https?:\/\/(api\.zhihu\.com|(103\.41\.167\.(226|234|235|236)))\/moments\/tab_v2 url reject-array
 ## 屏蔽知乎8.3.0版本首页顶部的视频角标 //api.zhihu.com
 ^https?:\/\/(api\.zhihu\.com|(103\.41\.167\.(226|234|235|236)))\/explore\/entry\/tips url reject-img
-## 新人必看之类的入口 //api.zhihu.com
-^https?:\/\/(api\.zhihu\.com|(103\.41\.167\.(226|234|235|236)))\/flow\/show_entrance url reject-array
-## 疑似通知角标 //api.zhihu.com
-^https?:\/\/(api\.zhihu\.com|(103\.41\.167\.(226|234|235|236)))\/settings\/new\/notification url reject-array
-## 屏蔽网页版强制登陆弹窗 //static.zhihu.com
-^https?:\/\/static\.zhihu\.com\/[^\/]+\/(main|column)\.signflow\.[^.]+.js url reject-200
-## 知乎跳过重定向页面以直接访问 //link.zhihu.com
-^https:\/\/link\.zhihu\.com\/\?target=(https?)?(%3A|:)?(\/\/|%2F%2F)?(.*?)(&source.*)?$ url 302 http://$4
-

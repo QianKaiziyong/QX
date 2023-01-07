@@ -12,23 +12,6 @@
 # > "reject-array"  策略返回 HTTP 状态码 200,同时附带一个空的 JSON 数组
 ###############################################################
 
-# > 闲鱼
-HOST-SUFFIX,ewqcxz.com,XianYu
-HOST-SUFFIX,hjkhjkl.com,XianYu
-HOST-SUFFIX,iopiopl.com,XianYu
-HOST-SUFFIX,lkjujm.com,XianYu
-HOST-SUFFIX,mnbvdfg.com,XianYu
-HOST-SUFFIX,nfmrtfv.com,XianYu
-HOST-SUFFIX,poiuytw.com,XianYu
-HOST-SUFFIX,qazasd.com,XianYu
-HOST-SUFFIX,redfcv.com,XianYu
-HOST-SUFFIX,svfrrg.com,XianYu
-HOST-SUFFIX,tfgvb.com,XianYu
-HOST-SUFFIX,uyhjnm.com,XianYu
-HOST-SUFFIX,vbmnmy.com,XianYu
-HOST-SUFFIX,wsxsdf.com,XianYu
-HOST-SUFFIX,xcbbtf.com,XianYu
-HOST-SUFFIX,xianyu.mobi,XianYu
 # > 高德
 HOST-SUFFIX,adiu.amap.com,REJECT
 HOST,aboard.apilocate.amap.com,REJECT

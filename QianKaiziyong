@@ -45,6 +45,7 @@ hostname = pan.baidu.com, guide-acs.m.taobao.com, qde.qunar.com, *api.weibo*, sd
 # > 12306
 ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList url script-response-body https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js
 # > 高德地图
+^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/app\/startup\/init\? url reject-dict
 ^https?:\/\/sns\.amap\.com\/ws\/msgbox\/pull.+ url reject-dict
 ^https?:\/\/sns\.amap\.com\/ws\/oss\/maplayer\/list\/? url reject-dict
 ^https?:\/\/m5.amap.com\/ws\/valueadded\/ url reject

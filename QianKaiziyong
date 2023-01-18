@@ -21,8 +21,8 @@ hostname = pan.baidu.com, update.pan.baidu.com, mbs.boc.cn, mlife.jf365.boc.cn, 
 ^https:\/\/update\.pan\.baidu\.com\/statistics\? url reject-dict
 # > 中国银行
 ^https:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg url reject-200
-# > 缤纷生活
-^https?:\/\/mlife\.jf365\.boc\.cn\/mlife\/mobilelife\/uploadfile\/IosPict1\/.*.png url reject-200
+# > 中国银行缤纷生活
+^https?:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\?txnId=2PIC000001 url reject-200
 # > 中国工商银行
 #^https?+:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\/ url reject-200
 # > 工银E生活

@@ -15,46 +15,46 @@
 
 # 去重后的hostname，将对以下域名进行MITM（MAN-IN-THE-MIDDLE：中间人攻击）
 hostname = pan.baidu.com, update.pan.baidu.com, mbs.boc.cn, image2.elife.icbc.com.cn, webappcfg.paas.cmbchina.com, s3gw.cmbimg.com, iobs.pingan.com.cn, api.pinduoduo.com, gab.122.gov.cn, ad.12306.cn, *.tieba.baidu.com, cloud.189.cn, zt-app.go189.cn, m.ctrip.com, qde.qunar.com, edith.xiaohongshu.com, pages.xiaohongshu.com, www.xiaohongshu.com, api.m.jd.com, ms.jr.jd.com, m.jd.com, acs.m.taobao.com, guide-acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, asp.cntv.myalicdn.com, list-app-m.i4.cn, mea.meitudata.com, pss.txffp.com, osg-static.sgcc.com.cn, res.xiaojukeji.com, img-ys011.didistatic.com, api.coolapk.com, api-access.pangolin-sdk-toutiao.com, client.app.coc.10086.cn, wap.js.10086.cn, mlife.jf365.boc.cn, api.douban.com
-# > 百度云 //pan.baidu.com
+# > baiduyun //pan.baidu.com
 ^https:\/\/pan\.baidu\.com\/act\/api\/activityentry\? url reject-dict
 ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adx\? url reject-dict
 ^https:\/\/update\.pan\.baidu\.com\/statistics\? url reject-dict
-# > 中国银行
+# > zhongguoyinhang
 ^https:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg url reject-200
-# > 中国银行缤纷生活
+# > zhongguoyinhangbinfenshenghuo
 ^https?:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\?txnId=2PIC000001 url reject-200
-# > 中国工商银行
+# > zhongguogongshangyinhang
 #^https?+:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\/ url reject-200
-# > 工银E生活
+# > gongyinEshenghuo
 ^https?:\/\/image2\.elife\.icbc\.com\.cn\/filepath\/elife\/2022\/*\/*\/*\/.*.jpg url reject-200
-# > 掌上生活（设置打不开,8.5.10以上版本很多功能打不开,添加主机名生效）
+# > zhangshangshenghuo
 ^https?:\/\/res\.cc\.cmbimg\.com\/fsp\/File\/AdPlatformPublic\/.*.(jpeg|jpg|png) url reject-200
-# > 招商银行
+# > zhaoshangyinhang
 ^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig url reject-200
 # > gif url reject 只拦截gif格式的图片
 ^https:\/\/s3gw.cmbimg.com\/mbappinitads\/.*.(jpg|png) url reject-200
-# > 平安好车主
+# > pinganhaochezhu
 ^https?:\/\/iobs\.pingan\.com\.cn\/download\/bweb-per-sf-prd\/bweb url reject-200
 ^https?:\/\/iobs\.pingan\.com\.cn\/download\/icore-aops-base-dmz-prd\/(YourSystemName|icore-apps-ad) url reject-200
-# > 拼多多
+# > pinduoduo
 ^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash url reject
-# > 交管12123
+# > jiaoguan12123
 ^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ url reject
 ^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery url reject
 # > 12306
 ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList url script-response-body https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js
-# 贴吧全面去广告 //c.tieba.baidu.com, tiebac.baidu.com
-# 须搭配分流: IP-CIDR, 180.76.76.200/32, REJECT
+# baidutieba //c.tieba.baidu.com, tiebac.baidu.com
+# fenliu: IP-CIDR, 180.76.76.200/32, REJECT
 ^http(:\/\/c\.tieba|s:\/\/tiebac)\.baidu\.com\/(c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)$|tiebaads\/commonbatch|c\/s\/sync$) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js
 ^http(:\/\/c\.tieba|s:\/\/tiebac)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaProto.js
-# > 中国电信
+# > zhongguodianxin
 ^https?:\/\/cloud\.189\.cn\/include\/splash\/ url reject
 ^https?:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.*?Animation url reject-img
-# > 携程（8.47.0以上版本会有部分图片加载不出来）
+# > xiecheng
 ^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/13916\/scjson\/tripAds url reject-200
-# > 去哪儿
+# > qunaer
 ^https:\/\/qde\.qunar\.com\/preload url reject-200
-# > 小红书
+# > xiaohongshu
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config url script-response-body https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/xiaohongshu/xiaohongshu.ad.js
 ^https:\/\/www\.xiaohongshu\.com\/api\/sns\/v1\/ads\/apple\/record* url reject
 ^https:\/\/www\.xiaohongshu\.com\/api\/sns\/v1\/tag\/ads_engage* url reject
@@ -62,12 +62,12 @@ hostname = pan.baidu.com, update.pan.baidu.com, mbs.boc.cn, image2.elife.icbc.co
 ^https:\/\/pages\.xiaohongshu\.com\/data\/native\/matrix_switches* url reject
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/hot_list url response-body items":\[.+\] response-body items":[]
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/trending url response-body queries":\[.+\] response-body queries":[]
-# > 京东 //api.m.jd.com
+# > jingdong //api.m.jd.com
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=queryMaterialAdverts url reject
 ^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ url reject
 ^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/(aladdin|base)\/(new)?na\/m\/(getLoadingPicture|adInfo) url reject
-# > 淘宝
+# > taobao
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome\/ url reject-200
 ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.tmall\.wireless url reject-200
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv url reject-200
@@ -75,7 +75,7 @@ hostname = pan.baidu.com, update.pan.baidu.com, mbs.boc.cn, image2.elife.icbc.co
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/ url reject-200
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get\/ url reject-200
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources\/ url reject-200
-# > 闲鱼
+# > xianyu
 ^https?:\/\/gw\.alicdn\.com\/tfs\/.+?\d{4}-\d{4}\/[a-z]{3}$ url reject-200
 ^https?:\/\/gw\.alicdn\.com\/tfs\/TB1.+?750-\d{4} url reject-200
 ^https?:\/\/heic\.alicdn\.com\/tps\/i4\/.+?\.jpg_1200x1200q90\.jpg_\.heic$ url reject-200
@@ -86,29 +86,29 @@ hostname = pan.baidu.com, update.pan.baidu.com, mbs.boc.cn, image2.elife.icbc.co
 ^https?:\/\/(gw|heic)\.alicdn\.com\/imgextra\/.+\d{4}-\d{4}\.jpg_(9\d{2}|\d{4}) url reject
 ^https:\/\/gw.alicdn.com\/mt\/ url reject
 ^https:\/\/gw.alicdn.com\/tfs\/.+\d{3,4}-\d{4} url reject
-# > 爱思助手
+# > aisizhushou
 ^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml url reject
-# > 美图秀秀
+# > meituxiuxiu
 ^https?:\/\/mea\.meitudata\.com\/kaiping url reject
-# > 票根
+# > piaogen
 ^https?:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen/ url reject-200
-# > 网上国网（倒计时还在）
+# > wangshangguowang
 ^https?:\/\/osg-static\.sgcc\.com\.cn\/omg-static\/.*.jpg url reject-200
-# > 滴滴出行（推荐英文版）
+# > didi
 https?://res\.xiaojukeji\.com\/resapi\/activity\/mget url reject-dict
 https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) url reject
 ^https?:\/\/img-ys011\.didistatic\.com\/static\/ad_oss\/.*.jpg url reject
-# > 酷安
+# > kuan
 ^https?:\/\/api\.coolapk\.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js
 ^https?://api-access\.pangolin-sdk-toutiao\.com/api/ad/union/sdk url reject
 ^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch url reject-dict
 #^https:\/\/api.coolapk.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cookapk.js
 #^https:\/\/api\.coolapk\.com\/v\d\/search\?.*type=hotSearch url reject-dict
-# > 中国移动
+# > zhongguoyidong
 ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit url reject
 ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList url reject
-# > 中国移动江苏
+# > zhongguoyidongjiangsu
 ^https?:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query url reject
-# > 豆瓣
+# > douban
 ^https:\/\/api\.douban\.com\/v2\/app_ads\/splash.* url reject
 ^https:\/\/api\.douban\.com\b.*\/common_ads\?.* url reject

@@ -12,21 +12,13 @@
 # > "reject-array"  策略返回 HTTP 状态码 200,同时附带一个空的 JSON 数组
 ###############################################################
 
+# 贴吧
+IP-CIDR,180.76.76.200/32,REJECT
 # > 高德
-HOST-SUFFIX,adiu.amap.com,REJECT
-HOST,aboard.apilocate.amap.com,REJECT
-HOST,apiinit.amap.com,REJECT
-HOST,icloud-amap.com,REJECT
-HOST,logs.amap.com,REJECT
-HOST-SUFFIX,dualstack-logs.amap.com,REJECT
-HOST-SUFFIX,logs.amap.com,REJECT
-HOST-SUFFIX,optimus-ads.amap.com,REJECT
-HOST-SUFFIX,page.amap.com,REJECT
-HOST,optimus-ads.amap.com, reject
-HOST,optimus-ads.amap.com.w.alikunlun.com, reject
-HOST-SUFFIX, shouji.sougou.com, reject
-HOST, u51.me, reject
-HOST-SUFFIX, u51.me, reject
+HOST,amap-aos-info-nogw.amap.com,REJECT
+HOST,amdc.m.taobao.com,REJECT
+HOST,awaken.amap.com,REJECT
+HOST,free-aos-cdn-image.amap.com,REJECT
 # > 交管12123
 host, static.122.gov.cn, reject
 HOST-SUFFIX, v3.fstats.xyz, reject
@@ -34,71 +26,19 @@ HOST-SUFFIX, wss.haoyundmn.com, reject
 HOST-SUFFIX, new.xiongzhangad.com, reject  
 HOST-SUFFIX, alexametrics.com, reject 
 HOST-KEYWORD, in-page-push, reject
-# > 微博
-HOST-KEYWORD,fastimage.uve.weibo.com, reject
-HOST-KEYWORD,adimg.uve.weibo.com, reject
-HOST-SUFFIX,adimg.vue.weibo.com, reject
-HOST-SUFFIX,zymo.mps.weibo.com, reject
-HOST-SUFFIX,weibomingzi.com, reject
-HOST-SUFFIX,sdkapp.uve.weibo.com, reject
-HOST-SUFFIX,s.alitui.weibo.com, reject
-HOST-SUFFIX,promote.biz.weibo.cn, reject
-HOST-SUFFIX,gw5.push.mcp.weibo.cn, reject
-HOST-SUFFIX,game.weibo.cn, reject
-HOST-SUFFIX,biz.weibo.com, reject
-HOST-SUFFIX,adimg.uve.weibo.com, reject
-HOST-SUFFIX,game.weibo.com, reject
-HOST-SUFFIX,gw6.push.mcp.weibo.cn, reject
-HOST-KEYWORD,ads.viber.com, reject
-HOST-KEYWORD,ads-d.viber.com, reject
-HOST-KEYWORD,ads.aws.viber.com, reject
-HOST-SUFFIX,alitui.weibo.com, reject
-HOST,adimg.uve.weibo.com, reject
-HOST,adimg.vue.weibo.com, reject
-HOST-KEYWORD,adimg.uve.weibo.com,REJECT
-HOST-KEYWORD,alitui.weibo.com,REJECT
-HOST-KEYWORD,biz.weibo.com,REJECT
-HOST-KEYWORD,game.weibo.cn,REJECT
-HOST-KEYWORD,game.weibo.com,REJECT
-HOST-KEYWORD,gw5.push.mcp.weibo.cn,REJECT
-HOST-KEYWORD,gw6.push.mcp.weibo.cn,REJECT
-HOST-KEYWORD,promote.biz.weibo.cn,REJECT
-HOST-KEYWORD,s.alitui.weibo.com,REJECT
-HOST-KEYWORD,sdkapp.uve.weibo.com,REJECT
-HOST-KEYWORD,weibomingzi.com,REJECT
-HOST-KEYWORD,zymo.mps.weibo.com,REJECT
-HOST-KEYWORD,adimg.vue.weibo.com,REJECT
-HOST-KEYWORD,dp.im.weibo.cn,REJECT
-HOST-KEYWORD,m.game.weibo.cn,REJECT
-HOST-KEYWORD,c.biz.weibo.com,REJECT
-HOST-KEYWORD,c.wcpt.biz.weibo.com,REJECT
-HOST-KEYWORD,click.uve.weibo.com,REJECT
-HOST-KEYWORD,wax.weibo.com,REJECT
-HOST-KEYWORD,wbapp.uve.weibo.com,REJECT
-HOST-KEYWORD,widget.weibo.com,REJECT
-HOST-KEYWORD,zc.biz.weibo.com,REJECT
-HOST-KEYWORD,dsp.edm.weibo.cn,REJECT
-HOST-KEYWORD,alitui.weibo.com.cn,REJECT
-HOST-KEYWORD,biz.weibo.com.cn,REJECT
-HOST-KEYWORD,game.weibo.com.cn,REJECT
-HOST-KEYWORD,tui.weibo.com,REJECT
-HOST-KEYWORD,wax.weibo.com.cn,REJECT
-HOST-KEYWORD,ad.weibo.com,REJECT
-HOST-KEYWORD,adstrategy.biz.weibo.com,REJECT
-HOST-KEYWORD,s.weibo.com,REJECT
-HOST-KEYWORD,vs.biz.weibo.com,REJECT
 # >小红书
 HOST,ads-img-qc.xhscdn.com, reject
 HOST,ads-video-al.xhscdn.com, reject
 HOST,ads-video-qc.xhscdn.com, reject
 HOST,t-ads.xiaohongshu.com, reject
 # > 知乎
-USER-AGENT,AVOS*, reject
-HOST,appcloud2.in.zhihu.com, reject
-HOST,mqtt.zhihu.com, reject
-HOST,sugar.zhihu.com, reject
-HOST,118.89.204.198, reject
-IP-CIDR,118.89.204.198/32, reject
+HOST,appcloud.zhihu.com,REJECT
+HOST,appcloud2.in.zhihu.com,REJECT
+HOST,crash2.zhihu.com,REJECT
+HOST,mqtt.zhihu.com,REJECT
+HOST,sugar.zhihu.com,REJECT
+IP-CIDR,118.89.204.198/32,REJECT
+IP-CIDR,103.41.167.237/32,REJECT
 IP6-CIDR,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,REJECT
 # > 淘宝
 HOST-SUFFIX,apoll.m.taobao.com, reject

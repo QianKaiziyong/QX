@@ -106,6 +106,12 @@ IP-CIDR,122.229.8.47/32, reject
 IP-CIDR,122.229.29.89/32, reject
 # > 中国移动
 IP-CIDR,120.240.95.37/32, reject
+# 广告联盟
+HOST,is.snssdk.com,REJECT
+HOST,mi.gdt.qq.com,REJECT
+HOST,open.e.kuaishou.com,REJECT
+HOST-SUFFIX,pangolin-sdk-toutiao.com,REJECT
+HOST-SUFFIX,pangolin-sdk-toutiao-b.com,REJECT
 # > 隐私保护
 HOST-SUFFIX,airpr.com, reject
 HOST-SUFFIX,hotjar.com, reject

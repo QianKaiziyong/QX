@@ -12,6 +12,8 @@
 # > "reject-array"  策略返回 HTTP 状态码 200,同时附带一个空的 JSON 数组
 ###############################################################
 
+# > 酷安
+# > host-keyword, p6-be-pack-sign.pglstatp-toutiao.com, reject
 # 贴吧
 IP-CIDR,180.76.76.200/32,REJECT
 # > 高德

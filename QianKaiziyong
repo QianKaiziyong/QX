@@ -14,7 +14,7 @@
 
 
 # 去重后的hostname，将对以下域名进行MITM（MAN-IN-THE-MIDDLE：中间人攻击）
-hostname = pan.baidu.com, update.pan.baidu.com, mbs.boc.cn, image2.elife.icbc.com.cn, webappcfg.paas.cmbchina.com, s3gw.cmbimg.com, iobs.pingan.com.cn, api.pinduoduo.com, gab.122.gov.cn, ad.12306.cn, *.tieba.baidu.com, cloud.189.cn, zt-app.go189.cn, m.ctrip.com, qde.qunar.com, edith.xiaohongshu.com, pages.xiaohongshu.com, www.xiaohongshu.com, api.m.jd.com, ms.jr.jd.com, m.jd.com, acs.m.taobao.com, guide-acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, asp.cntv.myalicdn.com, list-app-m.i4.cn, mea.meitudata.com, pss.txffp.com, osg-static.sgcc.com.cn, res.xiaojukeji.com, img-ys011.didistatic.com, api.coolapk.com, api-access.pangolin-sdk-toutiao.com, client.app.coc.10086.cn, wap.js.10086.cn, mlife.jf365.boc.cn, api.mos.csvw.com, ucmp.sf-express.com, elife.icbc.com.cn, api.douban.com
+hostname = pan.baidu.com, update.pan.baidu.com, mbs.boc.cn, image2.elife.icbc.com.cn, webappcfg.paas.cmbchina.com, s3gw.cmbimg.com, iobs.pingan.com.cn, api.pinduoduo.com, gab.122.gov.cn, ad.12306.cn, *.tieba.baidu.com, m.ctrip.com, qde.qunar.com, edith.xiaohongshu.com, pages.xiaohongshu.com, www.xiaohongshu.com, api.m.jd.com, ms.jr.jd.com, m.jd.com, acs.m.taobao.com, guide-acs.m.taobao.com, gw.alicdn.com, list-app-m.i4.cn, mea.meitudata.com, pss.txffp.com, osg-static.sgcc.com.cn, res.xiaojukeji.com, img-ys011.didistatic.com, api.coolapk.com, api-access.pangolin-sdk-toutiao.com, client.app.coc.10086.cn, wap.js.10086.cn, mlife.jf365.boc.cn, api.mos.csvw.com, ucmp.sf-express.com, elife.icbc.com.cn, api.douban.com
 # > 百度云 //pan.baidu.com
 ^https:\/\/pan\.baidu\.com\/act\/api\/activityentry\? url reject-dict
 ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adx\? url reject-dict
@@ -48,9 +48,6 @@ hostname = pan.baidu.com, update.pan.baidu.com, mbs.boc.cn, image2.elife.icbc.co
 # fenliu: IP-CIDR, 180.76.76.200/32, REJECT
 ^http(:\/\/c\.tieba|s:\/\/tiebac)\.baidu\.com\/(c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)$|tiebaads\/commonbatch|c\/s\/sync$) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js
 ^http(:\/\/c\.tieba|s:\/\/tiebac)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaProto.js
-# > 中国电信
-^https?:\/\/cloud\.189\.cn\/include\/splash\/ url reject
-^https?:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.*?Animation url reject-img
 # > 携程
 ^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/13916\/scjson\/tripAds url reject-200
 # > 去哪儿
@@ -77,16 +74,10 @@ hostname = pan.baidu.com, update.pan.baidu.com, mbs.boc.cn, image2.elife.icbc.co
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get\/ url reject-200
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources\/ url reject-200
 # > 闲鱼
-^https?:\/\/gw\.alicdn\.com\/tfs\/.+?\d{4}-\d{4}\/[a-z]{3}$ url reject-200
-^https?:\/\/gw\.alicdn\.com\/tfs\/TB1.+?750-\d{4} url reject-200
-^https?:\/\/heic\.alicdn\.com\/tps\/i4\/.+?\.jpg_1200x1200q90\.jpg_\.heic$ url reject-200
-^https?:\/\/asp\.cntv\.myalicdn\.com\/.+?\?maxbr=850 url reject-200
-^https?:\/\/(?>heic|gw)\.alicdn\.com\/tfs\/TB1.+?-\d{4}-\d{4}\.jpg_1200x1200q90\.jpg_\.\w{3,4}$ url reject-200
-^https?:\/\/(gw|heic)\.alicdn\.com\/\w{2}s\/[\w\/.-]+\.jpg_(9\d{2}|\d{4}) url reject
-^https?:\/\/(gw|heic)\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3,4}-\d{4}\.jpg_(1\d{3}|9\d{2})x(1\d{3}|9\d{2})q\d0\.jpg_\.(heic|webp)$ url reject
-^https?:\/\/(gw|heic)\.alicdn\.com\/imgextra\/.+\d{4}-\d{4}\.jpg_(9\d{2}|\d{4}) url reject
-^https:\/\/gw.alicdn.com\/mt\/ url reject
-^https:\/\/gw.alicdn.com\/tfs\/.+\d{3,4}-\d{4} url reject
+^https:\/\/gw\.alicdn\.com\/mt\/ url reject
+^https:\/\/gw\.alicdn\.com\/tfs\/.+\d{3,4}-\d{4} url reject
+^https:\/\/gw\.alicdn\.com\/tps\/.+\d{3,4}-\d{4} url reject
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome url reject
 # > 爱思助手
 ^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml url reject
 # > 美图秀秀

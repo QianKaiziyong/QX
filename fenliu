@@ -1,19 +1,10 @@
-################################################################
-# 重写作用：针对部分APP开屏广告，应用内广告进行拦截
-# 重要提示：某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
-# 项目地址：https://github.com/fmz200/wool_scripts
-# 交流频道：https://t.me/Aa28413761
-# 更新时间：2022.11.21 20:36
-###############################################################
-# > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
-# > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
-# > "reject-img"    策略返回 HTTP 状态码 200,同时附带 1px gif
-# > "reject-dict"   策略返回 HTTP 状态码 200,同时附带一个空的 JSON 对象
-# > "reject-array"  策略返回 HTTP 状态码 200,同时附带一个空的 JSON 数组
-###############################################################
-
+# 安全浏览限制解除
+HOST-SUFFIX, u3.ucweb.com, REJECT
+HOST-SUFFIX, safebrowsing.urlsec.qq.com, REJECT
+HOST-SUFFIX, safebrowsing.googleapis.com, REJECT
+HOST-SUFFIX, lookup.api.bsb.baidu.com, REJECT
 # > 酷安
-# > host-keyword, p6-be-pack-sign.pglstatp-toutiao.com, reject
+host-keyword, p6-be-pack-sign.pglstatp-toutiao.com, reject
 # 贴吧
 IP-CIDR,180.76.76.200/32,REJECT
 # > 高德
@@ -28,11 +19,6 @@ HOST-SUFFIX, wss.haoyundmn.com, reject
 HOST-SUFFIX, new.xiongzhangad.com, reject  
 HOST-SUFFIX, alexametrics.com, reject 
 HOST-KEYWORD, in-page-push, reject
-# >小红书
-HOST,ads-img-qc.xhscdn.com, reject
-HOST,ads-video-al.xhscdn.com, reject
-HOST,ads-video-qc.xhscdn.com, reject
-HOST,t-ads.xiaohongshu.com, reject
 # > 知乎
 HOST,appcloud.zhihu.com,REJECT
 HOST,appcloud2.in.zhihu.com,REJECT
@@ -42,70 +28,17 @@ HOST,sugar.zhihu.com,REJECT
 IP-CIDR,118.89.204.198/32,REJECT
 IP-CIDR,103.41.167.237/32,REJECT
 IP6-CIDR,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,REJECT
-# > 淘宝
-HOST-SUFFIX,apoll.m.taobao.com, reject
-HOST-SUFFIX,h-adashx.ut.taobao.com, reject
-HOST-SUFFIX,w.m.taobao.com, reject
-HOST,tunion-api.m.taobao.com, reject
-HOST-SUFFIX,ai.m.taobao.com, reject
-HOST-SUFFIX,re.m.taobao.com, reject
-HOST-SUFFIX,agoodm.m.taobao.com, reject
-HOST-SUFFIX,ai.taobao.com, reject
-HOST-SUFFIX,api.waptest.taobao.com, reject
-HOST-SUFFIX,dsp.simba.taobao.com, reject
-HOST-SUFFIX,fav.simba.taobao.com, reject
-HOST-SUFFIX,m.simba.taobao.com, reject
-HOST-SUFFIX,mclick.simba.taobao.com, reject
-HOST-SUFFIX,re.taobao.com, reject
-HOST-SUFFIX,redirect.simba.taobao.com, reject
-HOST-SUFFIX,simba.m.taobao.com, reject
-HOST-SUFFIX,srd.simba.taobao.com, reject
-HOST-SUFFIX,temai.taobao.com, reject
-HOST-SUFFIX,textlink.simba.taobao.com, reject
-HOST-SUFFIX,unitacs.m.taobao.com, reject
-HOST-SUFFIX,acs4baichuan.m.taobao.com, reject
-HOST-SUFFIX,adashbc.ut.taobao.com, reject
-HOST-SUFFIX,adash-c.ut.taobao.com, reject
-HOST-SUFFIX,adashxgc.ut.taobao.com, reject
-HOST-SUFFIX,adashx4yt.m.taobao.com, reject
-HOST-SUFFIX,tunion-api.m.taobao.com, reject
-HOST-SUFFIX,tns.simba.taobao.com, reject
-HOST-SUFFIX,click.mz.simba.taobao.com, reject
-HOST-SUFFIX,click.simba.taobao.com, reject
-HOST-SUFFIX,click.tz.simba.taobao.com, reject
-HOST-SUFFIX,stat.simba.taobao.com, reject
-HOST-SUFFIX,m-adash.m.taobao.com, reject
-HOST-SUFFIX,adashbc.m.taobao.com, reject
+# 腾讯 无法使用的推送服务
+HOST, tpns.qq.com, REJECT
+# RARBG 推广跳转
+HOST, furiousfar.com, REJECT
+HOST, swallowcrockerybless.com, REJECT
 # > 哔哩哔哩
-HOST-SUFFIX,cm.bilibili.com, reject
-host-keyword, api.sobot.com, reject
-HOST-SUFFIX,cm.ad.bilibili.com, reject
-HOST-SUFFIX,cm.adcommon.bilibili.com, reject
-HOST-SUFFIX,cm.game.bilibili.com, reject
-HOST-SUFFIX,cm.track.biligame.bilibili.com, reject
+IP-CIDR, 203.107.1.0/24, REJECT
 # > 抖音
 host-keyword,bds.snssdk.com, reject
 host-keyword,p6-ad-sign.byteimg.com, reject
 host-keyword,p3.pstatp.com, reject
-# > 运营商劫持
-HOST-SUFFIX,189key.com, reject
-HOST-SUFFIX,bkyhq.cn, reject
-HOST-SUFFIX,gscxs.cn, reject
-HOST-SUFFIX,hbssjd.cn, reject
-HOST-SUFFIX,hyunke.com, reject
-HOST-SUFFIX,jsncke.com, reject
-HOST-SUFFIX,junkucm.com, reject
-HOST-SUFFIX,lvehaisen.com, reject
-HOST-SUFFIX,tt114.net, reject
-HOST-SUFFIX,urlaw.cn, reject
-HOST-SUFFIX,urlet.cn, reject
-HOST-SUFFIX,wsgblw.com, reject
-HOST-SUFFIX,xchmai.com, reject
-HOST-SUFFIX,ygyzx.cn, reject
-HOST-SUFFIX,zmlled.cn, reject
-# > 中国电信
-IP-CIDR,122.229.8.47/32, reject
-IP-CIDR,122.229.29.89/32, reject
 # > 中国移动
 IP-CIDR,120.240.95.37/32, reject
 # 广告联盟
@@ -114,45 +47,3 @@ HOST,mi.gdt.qq.com,REJECT
 HOST,open.e.kuaishou.com,REJECT
 HOST-SUFFIX,pangolin-sdk-toutiao.com,REJECT
 HOST-SUFFIX,pangolin-sdk-toutiao-b.com,REJECT
-# > 隐私保护
-HOST-SUFFIX,airpr.com, reject
-HOST-SUFFIX,hotjar.com, reject
-HOST-SUFFIX,hotjar.io, reject
-HOST-SUFFIX,hs-analytics.net, reject
-HOST-SUFFIX,kissmetrics.com, reject
-HOST-SUFFIX,liadm.com, reject
-HOST-SUFFIX,mparticle.com, reject
-HOST-SUFFIX,nexac.com, reject
-HOST-SUFFIX,nr-data.net, reject
-HOST-SUFFIX,pardot.com, reject
-HOST-SUFFIX,parrable.com, reject
-HOST-SUFFIX,petametrics.com, reject
-HOST-SUFFIX,predic.io, reject
-HOST-SUFFIX,seewhy.com, reject
-HOST-SUFFIX,segment.io, reject
-HOST-SUFFIX,segmentify.com, reject
-HOST-SUFFIX,sentiance.com, reject
-HOST-SUFFIX,serverbid.com, reject
-HOST-SUFFIX,sessionm.com, reject
-HOST-SUFFIX,smartlook.com, reject
-HOST-SUFFIX,socdm.com, reject
-HOST-SUFFIX,socialannex.com, reject
-HOST-SUFFIX,socialbakers.com, reject
-HOST-SUFFIX,sociaplus.com, reject
-HOST-SUFFIX,stathat.com, reject
-HOST-SUFFIX,stats-locations.com, reject
-HOST-SUFFIX,tagcommander.com, reject
-HOST-SUFFIX,tailtarget.com, reject
-HOST-SUFFIX,tapad.com, reject
-HOST-SUFFIX,tapfiliate.com, reject
-HOST-SUFFIX,tapinfluence.com, reject
-HOST-SUFFIX,tapstream.com, reject
-HOST-SUFFIX,tend.io, reject
-HOST-SUFFIX,trackingio.com, reject
-HOST-SUFFIX,woopra.com, reject
-HOST-SUFFIX,wootric.com, reject
-HOST-SUFFIX,wowanalytics.co.uk, reject
-HOST-SUFFIX,zoomanalytics.co, reject
-HOST-SUFFIX,ads.linkedin.com, reject
-HOST,analytics.slashdotmedia.com, reject
-HOST,zgsdk.zhugeio.com, reject

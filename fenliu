@@ -9,7 +9,7 @@ host-keyword, p6-be-pack-sign.pglstatp-toutiao.com, reject
 IP-CIDR,180.76.76.200/32,REJECT
 # > 高德
 HOST,amap-aos-info-nogw.amap.com,REJECT
-#HOST,amdc.m.taobao.com,REJECT
+HOST,amdc.m.taobao.com,REJECT
 HOST,awaken.amap.com,REJECT
 HOST,free-aos-cdn-image.amap.com,REJECT
 # > 交管12123

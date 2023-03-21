@@ -8,7 +8,7 @@
 
 
 # 去重后的hostname，将对以下域名进行MITM（MAN-IN-THE-MIDDLE：中间人攻击）
-hostname = pan.baidu.com, update.pan.baidu.com, mbs.boc.cn, image2.elife.icbc.com.cn, webappcfg.paas.cmbchina.com, s3gw.cmbimg.com, iobs.pingan.com.cn, api.pinduoduo.com, gab.122.gov.cn, ad.12306.cn, *.tieba.baidu.com, homefront.qunar.com, client.qunar.com, api.m.jd.com, ms.jr.jd.com, m.jd.com, acs.m.taobao.com, guide-acs.m.taobao.com, gw.alicdn.com, list-app-m.i4.cn, mea.meitudata.com, pss.txffp.com, osg-static.sgcc.com.cn, res.xiaojukeji.com, img-ys011.didistatic.com, api.coolapk.com, api-access.pangolin-sdk-toutiao.com, wap.js.10086.cn, mlife.jf365.boc.cn, api.mos.csvw.com, ucmp.sf-express.com, elife.icbc.com.cn, api.douban.com
+hostname = pan.baidu.com, update.pan.baidu.com, mbs.boc.cn, image2.elife.icbc.com.cn, webappcfg.paas.cmbchina.com, s3gw.cmbimg.com, iobs.pingan.com.cn, api.pinduoduo.com, gab.122.gov.cn, ad.12306.cn, *.tieba.baidu.com, homefront.qunar.com, client.qunar.com, api.m.jd.com, ms.jr.jd.com, m.jd.com, acs.m.taobao.com, heic.alicdn.com, gw.alicdn.com, list-app-m.i4.cn, mea.meitudata.com, pss.txffp.com, osg-static.sgcc.com.cn, res.xiaojukeji.com, img-ys011.didistatic.com, api.coolapk.com, api-access.pangolin-sdk-toutiao.com, wap.js.10086.cn, mlife.jf365.boc.cn, api.mos.csvw.com, ucmp.sf-express.com, elife.icbc.com.cn, api.douban.com
 # > 百度云 //pan.baidu.com
 ^https?:\/\/pan\.baidu\.com\/(act\/(api\/activityentry|v2\/(bchannel|welfare)\/list)|rest\/2\.0\/pcs\/ad) url reject
 ;^https:\/\/pan\.baidu\.com\/act\/api\/activityentry\? url reject-dict
@@ -51,15 +51,16 @@ https://homefront.qunar.com/front/splash/ad url reject
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=queryMaterialAdverts url reject
 ^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ url reject
 ^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/(aladdin|base)\/(new)?na\/m\/(getLoadingPicture|adInfo) url reject
-# > 淘宝
-^https?:\/\/gw\.alicdn\.com\/imgextra\/i\d\/.+1125-1602\.jpg url reject-200
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome\/ url reject-200
-^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.tmall\.wireless url reject-200
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv url reject-200
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/ url response-body "ems_etao_advertise" response-body ""
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/ url reject-200
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get\/ url reject-200
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources\/ url reject-200
+# 阿里巴巴 //acs.m.taobao.com, heic.alicdn.com
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv url reject
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/.+?etao_advertise url reject
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit url reject
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.etao\.noah\.query\/.+tao_splash url reject
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise url reject
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get url reject
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome url reject
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources url reject
+^https:\/\/heic\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3,4}-\d{4}\.jpg_(1\d{3}|9\d{2})x(1\d{3}|9\d{2})q[59]0\.jpg_\.heic$ url reject
 # > 闲鱼
 ^https:\/\/gw\.alicdn\.com\/mt\/ url reject
 ^https:\/\/gw\.alicdn\.com\/tfs\/.+\d{3,4}-\d{4} url reject

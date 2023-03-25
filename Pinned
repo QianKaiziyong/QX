@@ -51,7 +51,7 @@ HOST-SUFFIX, tracking-protection.cdn.mozilla.net, DIRECT
 HOST-SUFFIX, upaiyun.com, DIRECT
 
 # LAN
-；IP-CIDR, 0.0.0.0/8, DIRECT
+IP-CIDR, 0.0.0.0/8, DIRECT
 IP-CIDR, 10.0.0.0/8, DIRECT
 IP-CIDR, 100.64.0.0/10, DIRECT
 IP-CIDR, 127.0.0.0/8, DIRECT

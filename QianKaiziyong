@@ -66,7 +66,6 @@ https://homefront.qunar.com/front/splash/ad url reject
 ^https:\/\/gw\.alicdn\.com\/mt\/ url reject
 ^https:\/\/gw\.alicdn\.com\/tfs\/.+\d{3,4}-\d{4} url reject
 ^https:\/\/gw\.alicdn\.com\/tps\/.+\d{3,4}-\d{4} url reject
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome url reject
 # > 爱思助手
 ^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml url reject
 # > 美图秀秀

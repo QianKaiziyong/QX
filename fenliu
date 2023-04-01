@@ -1,8 +1,11 @@
 # 安全浏览限制解除
-HOST-SUFFIX, u3.ucweb.com, REJECT
-HOST-SUFFIX, safebrowsing.urlsec.qq.com, REJECT
-HOST-SUFFIX, safebrowsing.googleapis.com, REJECT
-HOST-SUFFIX, lookup.api.bsb.baidu.com, REJECT
+HOST, lookup.api.bsb.baidu.com, REJECT
+HOST, proxy.safebrowsing.apple, REJECT
+HOST, safebrowsing.g.applimg.com, REJECT
+HOST, safebrowsing.googleapis.com, REJECT
+HOST, safebrowsing.urlsec.qq.com, REJECT
+HOST, token.safebrowsing.apple, REJECT
+HOST, u3.ucweb.com, REJEC
 # > 酷安
 host-keyword, p6-be-pack-sign.pglstatp-toutiao.com, reject
 # > 高德

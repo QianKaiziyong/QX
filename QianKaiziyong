@@ -8,7 +8,7 @@
 
 
 # 去重后的hostname，将对以下域名进行MITM（MAN-IN-THE-MIDDLE：中间人攻击）
-hostname = app.10086.cn, client.app.coc.10086.cn, *.app.coc.10086.cn, amdc.m.taobao.com, pan.baidu.com, update.pan.baidu.com, mbs.boc.cn, image2.elife.icbc.com.cn, webappcfg.paas.cmbchina.com, s3gw.cmbimg.com, iobs.pingan.com.cn, api.pinduoduo.com, gab.122.gov.cn, ad.12306.cn, *.tieba.baidu.com, homefront.qunar.com, client.qunar.com, api.m.jd.com, ms.jr.jd.com, m.jd.com, acs.m.taobao.com, heic.alicdn.com, gw.alicdn.com, list-app-m.i4.cn, mea.meitudata.com, pss.txffp.com, osg-static.sgcc.com.cn, res.xiaojukeji.com, img-ys011.didistatic.com, api.coolapk.com, api-access.pangolin-sdk-toutiao.com, wap.js.10086.cn, mlife.jf365.boc.cn, api.mos.csvw.com, ucmp.sf-express.com, elife.icbc.com.cn, api.douban.com
+hostname = client.app.coc.10086.cn, h.app.coc.10086.cn, app.10086.cn, amdc.m.taobao.com, pan.baidu.com, update.pan.baidu.com, mbs.boc.cn, image2.elife.icbc.com.cn, webappcfg.paas.cmbchina.com, s3gw.cmbimg.com, iobs.pingan.com.cn, api.pinduoduo.com, gab.122.gov.cn, ad.12306.cn, *.tieba.baidu.com, homefront.qunar.com, client.qunar.com, api.m.jd.com, ms.jr.jd.com, m.jd.com, acs.m.taobao.com, heic.alicdn.com, gw.alicdn.com, list-app-m.i4.cn, mea.meitudata.com, pss.txffp.com, osg-static.sgcc.com.cn, res.xiaojukeji.com, img-ys011.didistatic.com, api.coolapk.com, api-access.pangolin-sdk-toutiao.com, wap.js.10086.cn, mlife.jf365.boc.cn, api.mos.csvw.com, ucmp.sf-express.com, elife.icbc.com.cn, api.douban.com
 # > 百度云 //pan.baidu.com
 ^https?:\/\/pan\.baidu\.com\/(act\/(api\/activityentry|v2\/(bchannel|welfare)\/list)|rest\/2\.0\/pcs\/ad) - reject
 ；^https?:\/\/pan\.baidu\.com\/(act\/(api\/activityentry|v2\/(bchannel|welfare)\/list)|rest\/2\.0\/pcs\/ad) url reject
@@ -85,9 +85,7 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 # > 中国移动江苏
 ^https?:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query url reject
 # > 中国移动
-^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit url reject-200
-# 多个悬浮窗 感谢#热心网友分享
-^https:\/\/(client\.app\.coc|h\.app\.coc|app)\.10086\.cn\/biz-orange\/DN\/emotionMarket url reject
+^https?:\/\/((client|h)\.app\.coc|app)\.10086\.cn\/biz-orange\/DN\/(emotionMarket|explorePage\/getAdverList|init\/startInit)
 # > 豆瓣
 ^https:\/\/api\.douban\.com\/v2\/app_ads\/splash.* url reject
 ^https:\/\/api\.douban\.com\b.*\/common_ads\?.* url reject

@@ -5,7 +5,8 @@ HOST, safebrowsing.g.applimg.com, REJECT
 HOST, safebrowsing.googleapis.com, REJECT
 HOST, safebrowsing.urlsec.qq.com, REJECT
 HOST, token.safebrowsing.apple, REJECT
-HOST, u3.ucweb.com, REJEC
+HOST, vs6.bj2ct.u3.ucweb.com, REJECT
+HOST-SUFFIX, u3.ucweb.com, REJECT
 # > 酷安
 host-keyword, p6-be-pack-sign.pglstatp-toutiao.com, reject
 # > 高德

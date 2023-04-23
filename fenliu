@@ -1,3 +1,8 @@
+# Google
+HOST, googleads.g.doubleclick-cn.net, REJECT
+HOST, googleads.g.doubleclick.net, REJECT
+HOST, pubads.g.doubleclick.net, REJECT
+HOST, pagead2.googlesyndication.com, REJECT
 # 安全浏览限制解除
 HOST, lookup.api.bsb.baidu.com, REJECT
 HOST, proxy.safebrowsing.apple, REJECT
@@ -38,6 +43,8 @@ host-keyword,p6-ad-sign.byteimg.com, reject
 host-keyword,p3.pstatp.com, reject
 # > 中国移动
 IP-CIDR,120.240.95.37/32, reject
+# 工商银行 开屏广告
+HOST, pageviewp.icbc.com.cn, REJECT
 # 广告联盟
 ；HOST,is.snssdk.com,REJECT
 HOST,mi.gdt.qq.com,REJECT

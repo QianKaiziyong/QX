@@ -43,16 +43,6 @@ hostname = a.sinopecsales.com, member.lxjchina.com.cn, miniapp.sexytea2013.com, 
 # > 去哪儿
 https://homefront.qunar.com/front/splash/ad url reject
 ^https?:\/\/client\.qunar\.com\/pitcher-proxy\?qrt=p_splashAd url reject
-# > 京东 //api.m.jd.com
-^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
-^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=queryMaterialAdverts url reject
-^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ url reject
-^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/(aladdin|base)\/(new)?na\/m\/(getLoadingPicture|adInfo) url reject
-# > 闲鱼
-^https:\/\/gw\.alicdn\.com\/mt\/ url reject
-^https:\/\/gw\.alicdn\.com\/tfs\/.+\d{3,4}-\d{4} url reject
-^https:\/\/gw\.alicdn\.com\/tps\/.+\d{3,4}-\d{4} url reject
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome url reject
 # > 爱思助手
 ^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml url reject
 # > 美图秀秀

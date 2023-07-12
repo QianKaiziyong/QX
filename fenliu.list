@@ -1,8 +1,3 @@
-# Google
-HOST, googleads.g.doubleclick-cn.net, REJECT
-HOST, googleads.g.doubleclick.net, REJECT
-HOST, pubads.g.doubleclick.net, REJECT
-HOST, pagead2.googlesyndication.com, REJECT
 # 安全浏览限制解除
 HOST, lookup.api.bsb.baidu.com, REJECT
 HOST, proxy.safebrowsing.apple, REJECT
@@ -11,6 +6,7 @@ HOST, safebrowsing.googleapis.com, REJECT
 HOST, safebrowsing.urlsec.qq.com, REJECT
 HOST, token.safebrowsing.apple, REJECT
 HOST, vs6.bj2ct.u3.ucweb.com, REJECT
+HOST-SUFFIX, safebrowsing.apple, REJECT
 HOST-SUFFIX, u3.ucweb.com, REJECT
 # > 酷安
 host-keyword, p6-be-pack-sign.pglstatp-toutiao.com, reject
@@ -28,21 +24,14 @@ HOST-SUFFIX, alexametrics.com, reject
 HOST-KEYWORD, in-page-push, reject
 # 腾讯 无法使用的推送服务
 HOST, tpns.qq.com, REJECT
-# > 抖音
-host-keyword,bds.snssdk.com, reject
-host-keyword,p6-ad-sign.byteimg.com, reject
-host-keyword,p3.pstatp.com, reject
 # > 中国移动
 IP-CIDR,120.240.95.37/32, reject
 # 工商银行 开屏广告
 HOST, pageviewp.icbc.com.cn, REJECT
 # 广告联盟
-；HOST,is.snssdk.com,REJECT
 HOST,mi.gdt.qq.com,REJECT
 HOST,open.e.kuaishou.com,REJECT
 HOST-SUFFIX,pangolin-sdk-toutiao.com,REJECT
 HOST-SUFFIX,pangolin-sdk-toutiao-b.com,REJECT
-## HTTPDNS服务器
-IP-CIDR, 203.107.1.1/32, REJECT
-## 百度贴吧
+# 百度贴吧
 IP-CIDR, 186.76.76.200/32, REJECT

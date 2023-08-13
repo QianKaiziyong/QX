@@ -78,7 +78,7 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https?:\/\/elife\.icbc\.com\.cn\/OFSTNEWBASE\/floorinfo\/getMantlePages\.do url reject-200
 # > 滴滴小程序
 ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/core url reject-dict
-^https:\/\/common\.diditaxi\.com\.cn\/common\/v5 url script-response-body https://raw.githubusercontent.com/jizhi0520/QX/main/didi.js
+;^https:\/\/common\.diditaxi\.com\.cn\/common\/v5 url script-response-body https://raw.githubusercontent.com/jizhi0520/QX/main/didi.js
 #星巴克 微信小程序净化
 ^https:\/\/3pp\.starbucks\.com\.cn\/wxmem\/popup url reject-dict
 ^https:\/\/3pp\.starbucks\.com\.cn\/wxmem\/index\/banner url reject-dict
@@ -89,6 +89,6 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https:\/\/tm-api\.pin-dao\.cn\/home\/api\/index\/activeConfig\/v2 url reject-dict
 ^https:\/\/tm-api\.pin-dao\.cn\/home\/api\/resource\/config\/homeBannerNodes url reject-dict
 #茶颜悦色 微信小程序净化
-^https:\/\/miniapp\.sexytea2013\.com\/cms\/slot\/queryByCodes\?codes=INDEX_TOP_BANNER url script-response-body https://raw.githubusercontent.com/jizhi0520/QX/main/chayan.js
+;^https:\/\/miniapp\.sexytea2013\.com\/cms\/slot\/queryByCodes\?codes=INDEX_TOP_BANNER url script-response-body https://raw.githubusercontent.com/jizhi0520/QX/main/chayan.js
 #老乡鸡 微信小程序净化
 ^https:\/\/member\.lxjchina\.com\.cn\/mini-server\/home\/page\/banner url reject-dict

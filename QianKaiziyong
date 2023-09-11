@@ -8,7 +8,7 @@
 
 
 # 去重后的hostname，将对以下域名进行MITM（MAN-IN-THE-MIDDLE：中间人攻击）
-hostname = biz.cyapi.cn, wrapper.cyapi.cn, a.sinopecsales.com, member.lxjchina.com.cn, tm-api.pin-dao.cn, api.mcd.cn, 3pp.starbucks.com.cn, pan.baidu.com, mbs.boc.cn, image2.elife.icbc.com.cn, webappcfg.paas.cmbchina.com, s3gw.cmbimg.com, api.pinduoduo.com, gab.122.gov.cn, ad.12306.cn, *.tieba.baidu.com, homefront.qunar.com, client.qunar.com, list-app-m.i4.cn, pss.txffp.com, osg-static.sgcc.com.cn, api.coolapk.com, wap.js.10086.cn,mlife.jf365.boc.cn, api.mos.csvw.com, ucmp.sf-express.com, elife.icbc.com.cn, api.douban.com
+hostname = miniapp.sexytea2013.com, biz.cyapi.cn, wrapper.cyapi.cn, a.sinopecsales.com, member.lxjchina.com.cn, tm-api.pin-dao.cn, api.mcd.cn, 3pp.starbucks.com.cn, pan.baidu.com, mbs.boc.cn, image2.elife.icbc.com.cn, webappcfg.paas.cmbchina.com, s3gw.cmbimg.com, api.pinduoduo.com, gab.122.gov.cn, ad.12306.cn, *.tieba.baidu.com, homefront.qunar.com, client.qunar.com, list-app-m.i4.cn, pss.txffp.com, osg-static.sgcc.com.cn, api.coolapk.com, wap.js.10086.cn,mlife.jf365.boc.cn, api.mos.csvw.com, ucmp.sf-express.com, elife.icbc.com.cn, api.douban.com
 # > 百度云 //pan.baidu.com
 ;^https?:\/\/pan\.baidu\.com\/(act\/(api\/activityentry|v2\/(bchannel|welfare)\/list)|rest\/2\.0\/pcs\/ad) - reject
 # > 中国银行
@@ -76,6 +76,8 @@ https://homefront.qunar.com/front/splash/ad url reject
 ^https:\/\/tm-api\.pin-dao\.cn\/home\/api\/resource\/config\/homeBannerNodes url reject-dict
 #老乡鸡 微信小程序净化
 ^https:\/\/member\.lxjchina\.com\.cn\/mini-server\/home\/page\/banner url reject-dict
+#茶颜悦色 微信小程序净化
+^https:\/\/miniapp\.sexytea2013\.com\/cms\/slot\/queryByCodes\?codes=INDEX_TOP_BANNER url script-response-body https://raw.githubusercontent.com/jizhi0520/QX/main/chayan.js
 #彩云天气解锁
 ^https:\/\/api\.caiyunapp\.com\/v1\/activity\? url reject-dict
 ^https:\/\/biz\.cyapi\.cn\/(p\/v1\/vip_info|v2\/user) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js

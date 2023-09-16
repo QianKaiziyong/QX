@@ -8,7 +8,7 @@
 
 
 # 去重后的hostname，将对以下域名进行MITM（MAN-IN-THE-MIDDLE：中间人攻击）
-hostname = biz.cyapi.cn, wrapper.cyapi.cn, a.sinopecsales.com, member.lxjchina.com.cn, tm-api.pin-dao.cn, api.mcd.cn, 3pp.starbucks.com.cn, pan.baidu.com, mbs.boc.cn, image2.elife.icbc.com.cn, webappcfg.paas.cmbchina.com, s3gw.cmbimg.com, api.pinduoduo.com, gab.122.gov.cn, ad.12306.cn, *.tieba.baidu.com, homefront.qunar.com, client.qunar.com, list-app-m.i4.cn, pss.txffp.com, osg-static.sgcc.com.cn, api.coolapk.com, wap.js.10086.cn,mlife.jf365.boc.cn, api.mos.csvw.com, ucmp.sf-express.com, elife.icbc.com.cn, api.douban.com
+hostname = az1mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, biz.cyapi.cn, wrapper.cyapi.cn, a.sinopecsales.com, member.lxjchina.com.cn, tm-api.pin-dao.cn, api.mcd.cn, 3pp.starbucks.com.cn, pan.baidu.com, mbs.boc.cn, image2.elife.icbc.com.cn, webappcfg.paas.cmbchina.com, s3gw.cmbimg.com, api.pinduoduo.com, gab.122.gov.cn, ad.12306.cn, *.tieba.baidu.com, homefront.qunar.com, client.qunar.com, list-app-m.i4.cn, pss.txffp.com, osg-static.sgcc.com.cn, api.coolapk.com, wap.js.10086.cn,mlife.jf365.boc.cn, api.mos.csvw.com, ucmp.sf-express.com, elife.icbc.com.cn, api.douban.com
 # > 百度云 //pan.baidu.com
 ;^https?:\/\/pan\.baidu\.com\/(act\/(api\/activityentry|v2\/(bchannel|welfare)\/list)|rest\/2\.0\/pcs\/ad) - reject
 # > 中国银行
@@ -20,7 +20,9 @@ hostname = biz.cyapi.cn, wrapper.cyapi.cn, a.sinopecsales.com, member.lxjchina.c
 # > 工银E生活
 ^https?:\/\/image2\.elife\.icbc\.com\.cn\/filepath\/elife\/2022\/*\/*\/*\/.*.jpg url reject-200
 # > 掌上生活
-^https?:\/\/res\.cc\.cmbimg\.com\/fsp\/File\/AdPlatformPublic\/.*.(jpeg|jpg|png) url reject-200
+#^https?:\/\/res\.cc\.cmbimg\.com\/fsp\/File\/AdPlatformPublic\/.*.(jpeg|jpg|png) url reject-200
+^https?:\/\/az1mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec url reject
+^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec url reject
 # > 招商银行
 ^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig url reject-200
 # > gif url reject 只拦截gif格式的图片

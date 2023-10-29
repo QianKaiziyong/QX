@@ -8,7 +8,7 @@
 
 
 # 去重后的hostname，将对以下域名进行MITM（MAN-IN-THE-MIDDLE：中间人攻击）
-hostname = ocrifs.ejoy.sinopec.com, az1mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, intellicc.bas.cmbchina.com, biz.cyapi.cn, wrapper.cyapi.cn, a.sinopecsales.com, member.lxjchina.com.cn, tm-api.pin-dao.cn, api.mcd.cn, 3pp.starbucks.com.cn, pan.baidu.com, mbs.boc.cn, image2.elife.icbc.com.cn, webappcfg.paas.cmbchina.com, s3gw.cmbimg.com, api.pinduoduo.com, gab.122.gov.cn, ad.12306.cn, *.tieba.baidu.com, homefront.qunar.com, client.qunar.com, list-app-m.i4.cn, pss.txffp.com, osg-static.sgcc.com.cn, api.coolapk.com, mlife.jf365.boc.cn, api.mos.csvw.com, ucmp.sf-express.com, elife.icbc.com.cn, api.douban.com
+hostname = client.app.coc.10086.cn, ocrifs.ejoy.sinopec.com, az1mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, intellicc.bas.cmbchina.com, biz.cyapi.cn, wrapper.cyapi.cn, a.sinopecsales.com, member.lxjchina.com.cn, tm-api.pin-dao.cn, api.mcd.cn, 3pp.starbucks.com.cn, pan.baidu.com, mbs.boc.cn, image2.elife.icbc.com.cn, webappcfg.paas.cmbchina.com, s3gw.cmbimg.com, api.pinduoduo.com, gab.122.gov.cn, ad.12306.cn, *.tieba.baidu.com, homefront.qunar.com, client.qunar.com, list-app-m.i4.cn, pss.txffp.com, osg-static.sgcc.com.cn, api.coolapk.com, mlife.jf365.boc.cn, api.mos.csvw.com, ucmp.sf-express.com, elife.icbc.com.cn, api.douban.com
 # > 百度云 //pan.baidu.com
 ;^https?:\/\/pan\.baidu\.com\/(act\/(api\/activityentry|v2\/(bchannel|welfare)\/list)|rest\/2\.0\/pcs\/ad) - reject
 # > 中国银行
@@ -58,6 +58,9 @@ https://homefront.qunar.com/front/splash/ad url reject
 ^https:\/\/api\.douban\.com\b.*\/common_ads\?.* url reject
 # > 上汽大众
 ^https:\/\/api\.mos\.csvw\.com\/mos\/operation\/home\/api\/v\d\/app\/brand\/queryDataForOperation url reject-200
+# > 中国移动
+^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit url reject
+^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList url reject
 # > 易捷加油
 ^https:\/\/a\.sinopecsales\.com\/app\/cms url reject-dict
 # > 顺丰速运小程序

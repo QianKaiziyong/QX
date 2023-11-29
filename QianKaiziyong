@@ -8,7 +8,7 @@
 
 
 # 去重后的hostname，将对以下域名进行MITM（MAN-IN-THE-MIDDLE：中间人攻击）
-hostname = ocrifs.ejoy.sinopec.com,az*mbasecc.bas.cmbchina.com, webappcfg.paas.cmbchina.com, biz.cyapi.cn, wrapper.cyapi.cn, a.sinopecsales.com, member.lxjchina.com.cn, tm-api.pin-dao.cn, api.mcd.cn, 3pp.starbucks.com.cn, pan.baidu.com, mbs.boc.cn, image2.elife.icbc.com.cn, webappcfg.paas.cmbchina.com, s3gw.cmbimg.com, api.pinduoduo.com, gab.122.gov.cn, ad.12306.cn, *.tieba.baidu.com, homefront.qunar.com, client.qunar.com, list-app-m.i4.cn, pss.txffp.com, osg-static.sgcc.com.cn, api.coolapk.com, mlife.jf365.boc.cn, api.mos.csvw.com, ucmp.sf-express.com, elife.icbc.com.cn
+hostname = api.m.jd.com, ocrifs.ejoy.sinopec.com,az*mbasecc.bas.cmbchina.com, webappcfg.paas.cmbchina.com, biz.cyapi.cn, wrapper.cyapi.cn, a.sinopecsales.com, member.lxjchina.com.cn, tm-api.pin-dao.cn, api.mcd.cn, 3pp.starbucks.com.cn, pan.baidu.com, mbs.boc.cn, image2.elife.icbc.com.cn, webappcfg.paas.cmbchina.com, s3gw.cmbimg.com, api.pinduoduo.com, gab.122.gov.cn, ad.12306.cn, *.tieba.baidu.com, homefront.qunar.com, client.qunar.com, list-app-m.i4.cn, pss.txffp.com, osg-static.sgcc.com.cn, api.coolapk.com, mlife.jf365.boc.cn, api.mos.csvw.com, ucmp.sf-express.com, elife.icbc.com.cn
 # > 百度云 //pan.baidu.com
 ;^https?:\/\/pan\.baidu\.com\/(act\/(api\/activityentry|v2\/(bchannel|welfare)\/list)|rest\/2\.0\/pcs\/ad) - reject
 # > 中国银行
@@ -27,6 +27,9 @@ hostname = ocrifs.ejoy.sinopec.com,az*mbasecc.bas.cmbchina.com, webappcfg.paas.c
 ^https:\/\/s3gw.cmbimg.com\/mbappinitads\/.*.(jpg|png) url reject-200
 # > 拼多多
 ^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash url reject
+# 京东 //api.m.jd.com
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/jd.js
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend) url reject-dict
 # > 交管12123
 ^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ url reject
 ^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery url reject

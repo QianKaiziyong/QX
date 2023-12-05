@@ -1,44 +1,73 @@
+# ======= A ======= #
 # 安全浏览限制解除
 HOST, lookup.api.bsb.baidu.com, REJECT
-HOST, proxy.safebrowsing.apple, REJECT
-HOST, safebrowsing.g.applimg.com, REJECT
-HOST, safebrowsing.googleapis.com, REJECT
-HOST, safebrowsing.urlsec.qq.com, REJECT
-HOST, token.safebrowsing.apple, REJECT
-HOST, vs6.bj2ct.u3.ucweb.com, REJECT
-HOST-SUFFIX, safebrowsing.apple, REJECT
 HOST-SUFFIX, u3.ucweb.com, REJECT
-# > 酷安
-host-keyword, p6-be-pack-sign.pglstatp-toutiao.com, reject
+HOST-KEYWORD, safebrowsing., REJECT
+
+# ======= B ======= #
+# 百度贴吧
+IP-CIDR, 186.76.76.200/32, REJECT
+
+# ======= G ======= #
 # > 高德
-;HOST,amap-aos-info-nogw.amap.com,REJECT
-;HOST,amdc.m.taobao.com,REJECT
-;HOST,awaken.amap.com,REJECT
-;HOST,free-aos-cdn-image.amap.com,REJECT
+HOST, amap-aos-info-nogw.amap.com, REJECT
+HOST, awaken.amap.com, REJECT
+HOST, free-aos-cdn-image.amap.com, REJECT
+# 工商银行 开屏广告
+HOST, pageviewp.icbc.com.cn, REJECT
+# 广告联盟
+HOST, ad.zijieapi.com, REJECT
+HOST, i.snssdk.com, REJECT
+HOST, is.snssdk.com, REJECT
+HOST, open.e.kuaishou.com, REJECT
+HOST-SUFFIX, miaozhen.com, REJECT
+HOST-KEYWORD, -ad-sign.byteimg.com, REJECT
+HOST-KEYWORD, -tos.pstatp.com, REJECT
+HOST-KEYWORD, asiad.byteactivity, REJECT
+HOST-KEYWORD, pangolin-sdk-toutiao, REJECT
+HOST-KEYWORD, pangolin.snssdk.com, REJECT
+HOST-KEYWORD, pglstatp-toutiao, REJECT
+HOST-KEYWORD, video-cn.snssdk.com, REJECT
+
+# ======= H ======= #
+# httpdns
+HOST-KEYWORD, httpdns., REJECT
+HOST-KEYWORD, httpdns-, REJECT
+
+# ======= J ======= #
+# 建设银行
+HOST-KEYWORD, adv.ccb.com, REJECT
 # 京东
 HOST, dns.jd.com, REJECT
 IP-CIDR, 101.124.19.122/32, REJECT
 IP6-CIDR, 2402:db40:5100:1011::5/128, REJECT
-# > 交管12123
-host, static.122.gov.cn, reject
-HOST-SUFFIX, v3.fstats.xyz, reject
-HOST-SUFFIX, wss.haoyundmn.com, reject 
-HOST-SUFFIX, new.xiongzhangad.com, reject  
-HOST-SUFFIX, alexametrics.com, reject 
-HOST-KEYWORD, in-page-push, reject
-# 腾讯 无法使用的推送服务
+
+# ======= K ======= #
+# > 酷安
+;host-keyword, p6-be-pack-sign.pglstatp-toutiao.com, reject
+
+# ======= T ======= #
+# 腾讯
+HOST, adsmind.gdtimg.com, REJECT
+HOST, info4.video.qq.com, REJECT
+HOST, info6.video.qq.com, REJECT
+HOST, ios.video.mpush.qq.com, REJECT
+HOST, otheve.beacon.qq.com, REJECT
+HOST, pgdt.gtimg.cn, REJECT
 HOST, tpns.qq.com, REJECT
-# > 中国移动
-IP-CIDR,120.240.95.37/32, reject
-# 工商银行 开屏广告
-HOST, pageviewp.icbc.com.cn, REJECT
-# 广告联盟
-HOST,mi.gdt.qq.com,REJECT
-HOST,open.e.kuaishou.com,REJECT
-HOST-SUFFIX,pangolin-sdk-toutiao.com,REJECT
-HOST-SUFFIX,pangolin-sdk-toutiao-b.com,REJECT
-# 百度贴吧
-IP-CIDR, 186.76.76.200/32, REJECT
+;HOST, vv.video.qq.com, REJECT
+HOST, vv6.video.qq.com, REJECT
+HOST-SUFFIX, gdt.qq.com, REJECT
+HOST-SUFFIX, l.qq.com, REJECT
+HOST-KEYWORD, trace.qq.com, REJECT
+HOST-KEYWORD, trace.video.qq.com, REJECT
+IP-CIDR, 47.110.187.87/32, REJECT
+
+# ======= X ======= #
+# 小米
+HOST, sdkconfig.ad.xiaomi.com, REJECT
+
+# ======= Z ======= #
 # 知乎
 HOST, appcloud.zhihu.com, REJECT
 HOST, appcloud2.in.zhihu.com, REJECT

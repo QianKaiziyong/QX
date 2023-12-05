@@ -29,9 +29,7 @@ hostname = ad.12306.cn, list-app-m.i4.cn, tiebac.baidu.com， api.caiyunapp.com,
 ^https:\/\/biz\.cyapi\.cn\/(p\/v1\/vip_info|v2\/user) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js
 ^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\? url reject-dict
 
-# ======= G ====== #
-# > 工银E生活 //image2.elife.icbc.com.cn
-；^https?:\/\/image2\.elife\.icbc\.com\.cn\/filepath\/elife\/2022\/*\/*\/*\/.*.jpg url reject-200
+
 
 # ======= J ====== #
 # 京东 //api.m.jd.com

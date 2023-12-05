@@ -51,8 +51,8 @@ hostname = ad.12306.cn, list-app-m.i4.cn, tiebac.baidu.com， api.caiyunapp.com,
 
 # ======= Q ====== #
 # > 去哪儿 //homefront.qunar.com， client.qunar.com
-；^https://homefront.qunar.com/front/splash/ad url reject
-；^https?:\/\/client\.qunar\.com\/pitcher-proxy\?qrt=p_splashAd url reject
+;^https://homefront.qunar.com/front/splash/ad url reject
+;^https?:\/\/client\.qunar\.com\/pitcher-proxy\?qrt=p_splashAd url reject
 
 # ======= S ====== #
 # > 上汽大众 //api.mos.csvw.com
@@ -64,7 +64,7 @@ hostname = ad.12306.cn, list-app-m.i4.cn, tiebac.baidu.com， api.caiyunapp.com,
 # 微信封禁页面 //weixin110.qq.com, security.wechat.com
 ^https\:\/\/(weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/wechat/wechat110.js
 # > 网上国网 //osg-static.sgcc.com.cn
-；^https?:\/\/osg-static\.sgcc\.com\.cn\/omg-static\/.*.jpg url reject-200
+;^https?:\/\/osg-static\.sgcc\.com\.cn\/omg-static\/.*.jpg url reject-200
 
 # ======= X ====== #
 # 闲鱼 //gw.alicdn.com, acs.m.taobao.com

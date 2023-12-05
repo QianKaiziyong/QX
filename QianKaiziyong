@@ -1,5 +1,5 @@
 # 去重后的hostname，将对以下域名进行MITM（MAN-IN-THE-MIDDLE：中间人攻击）
-hostname = ad.12306.cn, list-app-m.i4.cn, tiebac.baidu.com， api.caiyunapp.com, biz.cyapi.cn， wrapper.cyapi.cn， api.m.jd.com， gab.122.gov.cn， api.coolapk.com， api.pinduoduo.com， api.mos.csvw.com， mp.weixin.qq.com， weixin110.qq.com, security.wechat.com， gw.alicdn.com, acs.m.taobao.com， home.mi.com， a.sinopecsales.com， client.app.coc.10086.cn， mbs.boc.cn， mlife.jf365.boc.cn， az*mbasecc.bas.cmbchina.com， webappcfg.paas.cmbchina.com， ucmp.sf-express.com， elife.icbc.com.cn， 3pp.starbucks.com.cn， api.mcd.cn， tm-api.pin-dao.cn， member.lxjchina.com.cn， ocrifs.ejoy.sinopec.com  
+hostname = ad.12306.cn, list-app-m.i4.cn, tiebac.baidu.com， api.caiyunapp.com, biz.cyapi.cn， wrapper.cyapi.cn， api.m.jd.com， gab.122.gov.cn， api.coolapk.com， api.pinduoduo.com， api.mos.csvw.com， gw.alicdn.com, acs.m.taobao.com， home.mi.com， a.sinopecsales.com， client.app.coc.10086.cn， mbs.boc.cn， mlife.jf365.boc.cn， az*mbasecc.bas.cmbchina.com， webappcfg.paas.cmbchina.com， ucmp.sf-express.com， elife.icbc.com.cn， 3pp.starbucks.com.cn， api.mcd.cn， tm-api.pin-dao.cn， member.lxjchina.com.cn， ocrifs.ejoy.sinopec.com  
    
 # ======= 0 ======= #
 # 12306 开屏广告 //ad.12306.cn
@@ -59,10 +59,6 @@ hostname = ad.12306.cn, list-app-m.i4.cn, tiebac.baidu.com， api.caiyunapp.com,
 ^https:\/\/api\.mos\.csvw\.com\/mos\/operation\/home\/api\/v\d\/app\/brand\/queryDataForOperation url reject-200
 
 # ======= W ====== #
-# 微信 //mp.weixin.qq.com
-^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|masonryfeed|relatedarticle)\? url reject-dict
-# 微信封禁页面 //weixin110.qq.com, security.wechat.com
-^https\:\/\/(weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/wechat/wechat110.js
 # > 网上国网 //osg-static.sgcc.com.cn
 ;^https?:\/\/osg-static\.sgcc\.com\.cn\/omg-static\/.*.jpg url reject-200
 

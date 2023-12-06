@@ -85,9 +85,9 @@ hostname = ad.12306.cn, list-app-m.i4.cn, tiebac.baidu.com, api.caiyunapp.com, b
 # > 中国工商银行
 #^https?+:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\/ url reject-200
 # > 掌上生活 //
-开屏广告 az1mbasecc.bas.cmbchina.com
+## > 开屏广告 az1mbasecc.bas.cmbchina.com
 ^https?:\/\/az1mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec url reject
-设置栏目内广告 intellicc.bas.cmbchina.com
+## > 设置栏目内广告 intellicc.bas.cmbchina.com
 ^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec url reject
 # > 招商银行 //webappcfg.paas.cmbchina.com
 ^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig url reject-200

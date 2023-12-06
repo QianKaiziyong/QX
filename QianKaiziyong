@@ -1,5 +1,5 @@
 # 去重后的hostname，将对以下域名进行MITM（MAN-IN-THE-MIDDLE：中间人攻击）
-hostname = ad.12306.cn, list-app-m.i4.cn, tiebac.baidu.com， api.caiyunapp.com, biz.cyapi.cn， wrapper.cyapi.cn， api.m.jd.com， gab.122.gov.cn， api.coolapk.com， api.pinduoduo.com， api.mos.csvw.com， gw.alicdn.com, acs.m.taobao.com， home.mi.com， a.sinopecsales.com， client.app.coc.10086.cn， mbs.boc.cn， mlife.jf365.boc.cn， az*mbasecc.bas.cmbchina.com， webappcfg.paas.cmbchina.com， ucmp.sf-express.com， elife.icbc.com.cn， 3pp.starbucks.com.cn， api.mcd.cn， tm-api.pin-dao.cn， member.lxjchina.com.cn， ocrifs.ejoy.sinopec.com  
+hostname = ad.12306.cn, list-app-m.i4.cn, tiebac.baidu.com, api.caiyunapp.com, biz.cyapi.cn, wrapper.cyapi.cn, api.m.jd.com, gab.122.gov.cn, api.coolapk.com, api.pinduoduo.com, api.mos.csvw.com, gw.alicdn.com, acs.m.taobao.com, home.mi.com, a.sinopecsales.com, client.app.coc.10086.cn, mbs.boc.cn, mlife.jf365.boc.cn, az1mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, webappcfg.paas.cmbchina.com, ucmp.sf-express.com, elife.icbc.com.cn, 3pp.starbucks.com.cn, api.mcd.cn, tm-api.pin-dao.cn, member.lxjchina.com.cn, ocrifs.ejoy.sinopec.com  
    
 # ======= 0 ======= #
 # 12306 开屏广告 //ad.12306.cn
@@ -84,8 +84,11 @@ hostname = ad.12306.cn, list-app-m.i4.cn, tiebac.baidu.com， api.caiyunapp.com,
 ^https?:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\?txnId=2PIC000001 url reject-200
 # > 中国工商银行
 #^https?+:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\/ url reject-200
-# > 掌上生活 //az*mbasecc.bas.cmbchina.com
-^https:\/\/az\dmbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec url reject-dict
+# > 掌上生活 //
+开屏广告 az1mbasecc.bas.cmbchina.com
+^https?:\/\/az1mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec url reject
+设置栏目内广告 intellicc.bas.cmbchina.com
+^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec url reject
 # > 招商银行 //webappcfg.paas.cmbchina.com
 ^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig url reject-200
 

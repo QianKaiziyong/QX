@@ -44,7 +44,7 @@ IP6-CIDR, 2402:db40:5100:1011::5/128, REJECT
 
 # ======= K ======= #
 # > 酷安
-;host-keyword, p6-be-pack-sign.pglstatp-toutiao.com, reject
+host-keyword, p6-be-pack-sign.pglstatp-toutiao.com, reject
 
 # ======= T ======= #
 # 腾讯

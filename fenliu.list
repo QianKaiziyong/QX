@@ -1,12 +1,35 @@
 # ======= A ======= #
+# Apple
+HOST, advertising.apple.com, REJECT
+HOST, api-adservices.apple.com, REJECT
+HOST, apple.comscoreresearch.com, REJECT
+HOST, banners.itunes.apple.com, REJECT
+HOST, iad.apple.com, REJECT
+HOST, iadcontent.apple.com, REJECT
+HOST, iadctest.qwapi.com, REJECT
+HOST, iadmoo.apple.com, REJECT
+HOST, iadworkbench.apple.com, REJECT
+HOST, launch.apple.com, REJECT
+HOST, qwapi.apple.com, REJECT
+HOST-SUFFIX, advp.apple.com, REJECT
+HOST-SUFFIX, iad-apple.com, REJECT
+HOST-SUFFIX, iadsdk.apple.com, REJECT
 # 安全浏览限制解除
 HOST, lookup.api.bsb.baidu.com, REJECT
 HOST-SUFFIX, u3.ucweb.com, REJECT
 HOST-KEYWORD, safebrowsing., REJECT
 
+
 # ======= B ======= #
 # 百度贴吧
 IP-CIDR, 186.76.76.200/32, REJECT
+
+# ======= F ======= #
+# Foreca & Google
+HOST, pagead2.googlesyndication.com, REJECT
+HOST, www.googleadservices.com, REJECT
+HOST-SUFFIX, adservice.google.com, REJECT
+HOST-KEYWORD, ads.g.doubleclick, REJECT
 
 # ======= G ======= #
 # > 高德
@@ -36,15 +59,15 @@ HOST-KEYWORD, httpdns-, REJECT
 
 # ======= J ======= #
 # 建设银行
-HOST-KEYWORD, adv.ccb.com, REJECT
+;HOST-KEYWORD, adv.ccb.com, REJECT
 # 京东
-HOST, dns.jd.com, REJECT
-IP-CIDR, 101.124.19.122/32, REJECT
-IP6-CIDR, 2402:db40:5100:1011::5/128, REJECT
+;HOST, dns.jd.com, REJECT
+;IP-CIDR, 101.124.19.122/32, REJECT
+;IP6-CIDR, 2402:db40:5100:1011::5/128, REJECT
 
 # ======= K ======= #
 # > 酷安
-host-keyword, p6-be-pack-sign.pglstatp-toutiao.com, reject
+;host-keyword, p6-be-pack-sign.pglstatp-toutiao.com, reject
 
 # ======= T ======= #
 # 腾讯
@@ -65,7 +88,7 @@ IP-CIDR, 47.110.187.87/32, REJECT
 
 # ======= X ======= #
 # 小米
-HOST, sdkconfig.ad.xiaomi.com, REJECT
+;HOST, sdkconfig.ad.xiaomi.com, REJECT
 
 # ======= Z ======= #
 # 知乎

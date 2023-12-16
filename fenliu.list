@@ -1,4 +1,9 @@
 # ======= A ======= #
+# 阿里巴巴
+HOST, ossgw.alicdn.com, REJECT
+HOST, ems.youku.com, REJECT
+HOST, hudong.alicdn.com, REJECT
+HOST-SUFFIX, ut.taobao.com, REJECT
 # Apple
 HOST, advertising.apple.com, REJECT
 HOST, api-adservices.apple.com, REJECT
@@ -61,13 +66,21 @@ HOST-KEYWORD, httpdns-, REJECT
 # 建设银行
 ;HOST-KEYWORD, adv.ccb.com, REJECT
 # 京东
-;HOST, dns.jd.com, REJECT
-;IP-CIDR, 101.124.19.122/32, REJECT
-;IP6-CIDR, 2402:db40:5100:1011::5/128, REJECT
+HOST, dns.jd.com, REJECT
+IP-CIDR, 101.124.19.122/32, REJECT
+IP6-CIDR, 2402:db40:5100:1011::5/128, REJECT
 
 # ======= K ======= #
 # > 酷安
 ;host-keyword, p6-be-pack-sign.pglstatp-toutiao.com, reject
+
+# ======= S ======= #
+# 什么值得买
+HOST, api.zuihuimai.com, REJECT
+# 数字联盟
+HOST-SUFFIX, shuzilm.cn, REJECT
+# Speedtest
+HOST-SUFFIX, ad.gt, REJECT
 
 # ======= T ======= #
 # 腾讯

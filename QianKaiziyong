@@ -64,7 +64,7 @@ hostname = ad.12306.cn, amdc.m.taobao.com, list-app-m.i4.cn, c.tieba.baidu.com, 
 ^https:\/\/api\.mos\.csvw\.com\/mos\/operation\/home\/api\/v\d\/app\/brand\/queryDataForOperation url reject-200
 
 # ======= T ====== #
-# > TopWidgets解锁
+# > TopWidgets解锁//*xiaozujian.com
 ^https?:\/\/.*xiaozujian\.com\/api\/app\/config\/userConfig url script-response-body https://github.com/ddgksf2013/dev/raw/main/TopwidgetsProCrack.js
 
 # ======= W ====== #

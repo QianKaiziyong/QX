@@ -1,5 +1,5 @@
 # 去重后的hostname，将对以下域名进行MITM（MAN-IN-THE-MIDDLE：中间人攻击）
-hostname = ad.12306.cn, amdc.m.taobao.com, list-app-m.i4.cn, c.tieba.baidu.com, tiebac.baidu.com, api.caiyunapp.com, biz.cyapi.cn, wrapper.cyapi.cn, api.m.jd.com, gab.122.gov.cn, api.coolapk.com, api.pinduoduo.com, api.mos.csvw.com, gw.alicdn.com, acs.m.taobao.com, home.mi.com, a.sinopecsales.com, *.yangjibao.com, client.app.coc.10086.cn, mbs.boc.cn, mlife.jf365.boc.cn, az1mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, webappcfg.paas.cmbchina.com, ucmp.sf-express.com, elife.icbc.com.cn, 3pp.starbucks.com.cn, api.mcd.cn, tm-api.pin-dao.cn, member.lxjchina.com.cn, ocrifs.ejoy.sinopec.com  
+hostname = ad.12306.cn, amdc.m.taobao.com, list-app-m.i4.cn, c.tieba.baidu.com, tiebac.baidu.com, api.caiyunapp.com, biz.cyapi.cn, wrapper.cyapi.cn, api.m.jd.com, gab.122.gov.cn, explorer.tratao.com, api.coolapk.com, api.pinduoduo.com, api.mos.csvw.com, *xiaozujian, gw.alicdn.com, acs.m.taobao.com, home.mi.com, a.sinopecsales.com, *.yangjibao.com, client.app.coc.10086.cn, mbs.boc.cn, mlife.jf365.boc.cn, az1mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, webappcfg.paas.cmbchina.com, ucmp.sf-express.com, elife.icbc.com.cn, 3pp.starbucks.com.cn, api.mcd.cn, tm-api.pin-dao.cn, member.lxjchina.com.cn, ocrifs.ejoy.sinopec.com  
    
 # ======= 0 ======= #
 # 12306 开屏广告 //ad.12306.cn
@@ -38,6 +38,8 @@ hostname = ad.12306.cn, amdc.m.taobao.com, list-app-m.i4.cn, c.tieba.baidu.com, 
 ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend[06]) url reject-dict
 # > 交管12123 //gab.122.gov.cn
 ^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ url reject
+# > 极简汇率//explorer.tratao.com
+^https?:\/\/explorer\.tratao\.com\/api\/client\/xtool\/vip url script-response-body https://github.com/ddgksf2013/MoYu/raw/master/JiJianHuiLvProCrack.js
 
 # ======= K ======= #
 # > 酷安 //api.coolapk.com
@@ -61,9 +63,9 @@ hostname = ad.12306.cn, amdc.m.taobao.com, list-app-m.i4.cn, c.tieba.baidu.com, 
 # > 上汽大众 //api.mos.csvw.com
 ^https:\/\/api\.mos\.csvw\.com\/mos\/operation\/home\/api\/v\d\/app\/brand\/queryDataForOperation url reject-200
 
-
 # ======= T ====== #
-
+# > TopWidgets
+^https?:\/\/.*xiaozujian\.com\/api\/app\/config\/userConfig url script-response-body https://github.com/ddgksf2013/dev/raw/main/TopwidgetsProCrack.js
 
 # ======= W ====== #
 # > 网上国网 //osg-static.sgcc.com.cn

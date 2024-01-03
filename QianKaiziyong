@@ -38,7 +38,7 @@ hostname = ad.12306.cn, amdc.m.taobao.com, list-app-m.i4.cn, c.tieba.baidu.com, 
 ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend[06]) url reject-dict
 # > 交管12123 //gab.122.gov.cn
 ^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ url reject
-# > 极简汇率//explorer.tratao.com
+# > 极简汇率解锁//explorer.tratao.com
 ^https?:\/\/explorer\.tratao\.com\/api\/client\/xtool\/vip url script-response-body https://github.com/ddgksf2013/MoYu/raw/master/JiJianHuiLvProCrack.js
 
 # ======= K ======= #
@@ -64,7 +64,7 @@ hostname = ad.12306.cn, amdc.m.taobao.com, list-app-m.i4.cn, c.tieba.baidu.com, 
 ^https:\/\/api\.mos\.csvw\.com\/mos\/operation\/home\/api\/v\d\/app\/brand\/queryDataForOperation url reject-200
 
 # ======= T ====== #
-# > TopWidgets
+# > TopWidgets解锁
 ^https?:\/\/.*xiaozujian\.com\/api\/app\/config\/userConfig url script-response-body https://github.com/ddgksf2013/dev/raw/main/TopwidgetsProCrack.js
 
 # ======= W ====== #
@@ -83,7 +83,7 @@ hostname = ad.12306.cn, amdc.m.taobao.com, list-app-m.i4.cn, c.tieba.baidu.com, 
 # ======= Y ====== #
 # > 易捷加油 //a.sinopecsales.com
 ^https:\/\/a\.sinopecsales\.com\/app\/cms url reject-dict
-# > 养基宝//*.yangjibao.com
+# > 养基宝解锁//*.yangjibao.com
 ^https?:\/\/.*yangjibao\.com\/(wxapi\/)?account url script-response-body https://github.com/ddgksf2013/MoYu/raw/master/YangJiBaoProCrack.js
 
 # ======= Z ====== #

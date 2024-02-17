@@ -1,9 +1,10 @@
 # 去重后的hostname，将对以下域名进行MITM（MAN-IN-THE-MIDDLE：中间人攻击）
-hostname = ad.12306.cn, amdc.m.taobao.com, list-app-m.i4.cn, c.tieba.baidu.com, tiebac.baidu.com, api.caiyunapp.com, biz.cyapi.cn, wrapper.cyapi.cn, api.m.jd.com, gab.122.gov.cn, explorer.tratao.com, api.coolapk.com, api.pinduoduo.com, api.mos.csvw.com, *.xiaozujian.com, gw.alicdn.com, acs.m.taobao.com, home.mi.com, a.sinopecsales.com, *.yangjibao.com, client.app.coc.10086.cn, mbs.boc.cn, mlife.jf365.boc.cn, az1mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, webappcfg.paas.cmbchina.com, ucmp.sf-express.com, elife.icbc.com.cn, 3pp.starbucks.com.cn, api.mcd.cn, tm-api.pin-dao.cn, member.lxjchina.com.cn, ocrifs.ejoy.sinopec.com  
+hostname = ad.12306.cn, mobile.12306.cn, amdc.m.taobao.com, list-app-m.i4.cn, c.tieba.baidu.com, tiebac.baidu.com, api.caiyunapp.com, biz.cyapi.cn, wrapper.cyapi.cn, api.m.jd.com, gab.122.gov.cn, explorer.tratao.com, api.coolapk.com, api.pinduoduo.com, api.mos.csvw.com, *.xiaozujian.com, gw.alicdn.com, acs.m.taobao.com, home.mi.com, a.sinopecsales.com, *.yangjibao.com, client.app.coc.10086.cn, mbs.boc.cn, mlife.jf365.boc.cn, az1mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, webappcfg.paas.cmbchina.com, ucmp.sf-express.com, elife.icbc.com.cn, 3pp.starbucks.com.cn, api.mcd.cn, tm-api.pin-dao.cn, member.lxjchina.com.cn, ocrifs.ejoy.sinopec.com  
    
 # ======= 0 ======= #
-# 12306 开屏广告 //ad.12306.cn
-^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList url script-analyze-echo-response https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/12306.js
+# 12306 开屏广告 //ad.12306.cn, mobile.12306.cn
+^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList$ url script-analyze-echo-response https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/12306.js
+^https:\/\/mobile\.12306\.cn\/otsmobile\/app\/mgs\/mgw\.htm$ url script-response-header https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js
 
 # ======= A ======= #
 # amdc
@@ -33,9 +34,9 @@ hostname = ad.12306.cn, amdc.m.taobao.com, list-app-m.i4.cn, c.tieba.baidu.com, 
 
 # ======= J ====== #
 # > 京东 //api.m.jd.com
-^http:\/\/\w{32}\.jddebug\.com\/diagnose\? url reject
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/jingdong.js
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend[06]) url reject-dict
+;^http:\/\/\w{32}\.jddebug\.com\/diagnose\? url reject
+;^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/jingdong.js
+;^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend[06]) url reject-dict
 # > 交管12123 //gab.122.gov.cn
 ^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ url reject
 # > 极简汇率解锁//explorer.tratao.com

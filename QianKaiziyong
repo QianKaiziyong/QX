@@ -51,7 +51,7 @@ hostname = ad.12306.cn, mobile.12306.cn, amdc.m.taobao.com, list-app-m.i4.cn, c.
 
 # ======= P ====== #
 # > 拼多多 //api.pinduoduo.com
-^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash url reject
+;^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash url reject
 # > 票根 //pss.txffp.com
 ;^https?:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen/ url reject-200
 

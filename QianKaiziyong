@@ -44,10 +44,12 @@ hostname = ad.12306.cn, mobile.12306.cn, amdc.m.taobao.com, list-app-m.i4.cn, c.
 
 # ======= K ======= #
 # > 酷安 //api.coolapk.com
-;^https:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js
-^https:\/\/api\.coolapk\.com\/v6\/main\/(dataList|indexV8|init) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js
-;^https:\/\/api\.coolapk\.com\/v6\/page\/dataList\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js
-;^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch url reject-dict
+;^https:\/\/api\.coolapk\.com\/v6\/main\/(dataList|indexV8|init) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js
+https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch url reject-dict
+^https:\/\/api\.coolapk\.com\/v6\/main\/init url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/KuAn.js
+^https:\/\/api\.coolapk\.com\/v6\/main\/indexV8 url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/KuAn.js
+^https:\/\/api\.coolapk\.com\/v6\/page\/dataList url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/KuAn.js
+^https:\/\/api\.coolapk\.com\/v6\/account\/loadConfig\?key=my_page_card_config url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/KuAn.js
 
 # ======= P ====== #
 # > 拼多多 //api.pinduoduo.com
